@@ -44,7 +44,7 @@ export default function StatsSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 text-center border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 ${
+              className={`bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 text-center border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 ${
                 mounted ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 200}ms` }}

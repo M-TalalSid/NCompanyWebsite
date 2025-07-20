@@ -25,7 +25,7 @@ export default function PageTransitions({ children }: { children: React.ReactNod
     <div className="relative">
       {/* Page transition overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 transition-all duration-500 ${
+        className={`fixed inset-0 z-50 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 transition-all duration-400 ${
           isTransitioning ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -39,7 +39,7 @@ export default function PageTransitions({ children }: { children: React.ReactNod
 
       {/* Page content */}
       <div
-        className={`transition-all duration-500 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
+        className={`transition-all duration-400 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
       >
         {displayChildren}
       </div>

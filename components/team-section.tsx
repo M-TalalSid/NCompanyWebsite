@@ -85,9 +85,9 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 group text-center"
+              className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 group text-center"
             >
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1 group-hover:scale-110 transition-transform duration-200">
                 <img
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
@@ -101,19 +101,19 @@ export default function TeamSection() {
               <div className="flex justify-center space-x-4">
                 <a
                   href={member.social.linkedin}
-                  className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white hover:bg-purple-600 transition-colors duration-300"
+                  className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white hover:bg-purple-600 transition-colors duration-200"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href={member.social.twitter}
-                  className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white hover:bg-purple-600 transition-colors duration-300"
+                  className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white hover:bg-purple-600 transition-colors duration-200"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
                 <a
                   href={member.social.github}
-                  className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white hover:bg-purple-600 transition-colors duration-300"
+                  className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white hover:bg-purple-600 transition-colors duration-200"
                 >
                   <Github className="w-5 h-5" />
                 </a>

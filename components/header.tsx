@@ -34,7 +34,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center font-bold text-white text-xl group-hover:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center font-bold text-white text-xl group-hover:scale-110 transition-transform duration-200">
               MT
             </div>
             <span className="text-2xl font-bold text-white">INTERNATIONAL</span>
@@ -46,10 +46,10 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white/90 hover:text-white transition-colors duration-300 relative group"
+                className="text-white/90 hover:text-white transition-colors duration-200 relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-200"></span>
               </Link>
             ))}
           </nav>
@@ -78,7 +78,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-white/90 hover:text-white transition-colors duration-300 py-2"
+                  className="text-white/90 hover:text-white transition-colors duration-200 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

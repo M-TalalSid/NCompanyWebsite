@@ -19,9 +19,9 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center font-bold text-white text-xl">
-                N
+                MT
               </div>
-              <span className="text-2xl font-bold text-white">NexaForge</span>
+              <span className="text-2xl font-bold text-white">International</span>
             </Link>
             <p className="text-purple-200 leading-relaxed">
               Transforming businesses through innovative software solutions and cutting-edge technology.
@@ -29,28 +29,28 @@ export default function Footer() {
             <div className="flex space-x-4">
               <Link
                 href="https://x.com/internatio24827"
-                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-300"
+                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-200"
               >
                 <Twitter className="w-5 h-5" />
               </Link>
 
               <Link
                 href="https://www.linkedin.com/company/mt-inter-national/"
-                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-300"
+                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-200"
               >
                 <Linkedin className="w-5 h-5" />
               </Link>
 
               <Link
                 href="https://www.facebook.com/share/156wB5sCG6h/?mibextid=wwXIfr"
-                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-300"
+                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-200"
               >
                 <Facebook className="w-5 h-5" />
               </Link>
 
               <Link
                 href="https://www.instagram.com/mt__international/"
-                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-300"
+                className="w-10 h-10 bg-purple-800 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-200"
               >
                 <Instagram className="w-5 h-5" />
               </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={`/services/${service.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "")}`}
-                    className="text-purple-200 hover:text-white transition-colors duration-300"
+                    className="text-purple-200 hover:text-white transition-colors duration-200"
                   >
                     {service}
                   </Link>
@@ -82,7 +82,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="text-purple-200 hover:text-white transition-colors duration-300"
+                    className="text-purple-200 hover:text-white transition-colors duration-200"
                   >
                     {item}
                   </Link>
@@ -116,13 +116,13 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-purple-300">© 2025 NexaForge. All Rights Reserved.</p>
             <div className="flex space-x-6">
-              <Link href="/terms" className="text-purple-300 hover:text-white transition-colors duration-300">
+              <Link href="/terms" className="text-purple-300 hover:text-white transition-colors duration-200">
                 Terms of Service
               </Link>
-              <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors duration-300">
+              <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link href="/cookies" className="text-purple-300 hover:text-white transition-colors duration-300">
+              <Link href="/cookies" className="text-purple-300 hover:text-white transition-colors duration-200">
                 Cookie Policy
               </Link>
             </div>

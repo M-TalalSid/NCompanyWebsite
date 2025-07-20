@@ -162,7 +162,7 @@ export default function ModernContactForm() {
               type="text"
               value={formData.name}
               onChange={handleChange}
-              className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-300 ${
+              className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-200 ${
                 errors.name ? "border-red-400" : "border-purple-600"
               }`}
               placeholder="Your full name"
@@ -186,7 +186,7 @@ export default function ModernContactForm() {
               type="email"
               value={formData.email}
               onChange={handleChange}
-              className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-300 ${
+              className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-200 ${
                 errors.email ? "border-red-400" : "border-purple-600"
               }`}
               placeholder="your@email.com"
@@ -213,7 +213,7 @@ export default function ModernContactForm() {
               type="text"
               value={formData.company}
               onChange={handleChange}
-              className="bg-purple-900/50 border-2 border-purple-600 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-300"
+              className="bg-purple-900/50 border-2 border-purple-600 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-200"
               placeholder="Your company name"
             />
           </div>
@@ -229,7 +229,7 @@ export default function ModernContactForm() {
               type="tel"
               value={formData.phone}
               onChange={handleChange}
-              className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-300 ${
+              className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 rounded-xl h-12 transition-all duration-200 ${
                 errors.phone ? "border-red-400" : "border-purple-600"
               }`}
               placeholder="+1 (555) 123-4567"
@@ -254,7 +254,7 @@ export default function ModernContactForm() {
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full bg-purple-900/50 border-2 border-purple-600 text-white rounded-xl px-4 py-3 focus:border-purple-400 focus:outline-none transition-all duration-300"
+              className="w-full bg-purple-900/50 border-2 border-purple-600 text-white rounded-xl px-4 py-3 focus:border-purple-400 focus:outline-none transition-all duration-200"
             >
               <option value="">Select a service</option>
               <option value="custom-software">Custom Software Development</option>
@@ -279,7 +279,7 @@ export default function ModernContactForm() {
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              className="w-full bg-purple-900/50 border-2 border-purple-600 text-white rounded-xl px-4 py-3 focus:border-purple-400 focus:outline-none transition-all duration-300"
+              className="w-full bg-purple-900/50 border-2 border-purple-600 text-white rounded-xl px-4 py-3 focus:border-purple-400 focus:outline-none transition-all duration-200"
             >
               <option value="">Select budget range</option>
               <option value="5k-15k">$5,000 - $15,000</option>
@@ -301,7 +301,7 @@ export default function ModernContactForm() {
             name="timeline"
             value={formData.timeline}
             onChange={handleChange}
-            className="w-full bg-purple-900/50 border-2 border-purple-600 text-white rounded-xl px-4 py-3 focus:border-purple-400 focus:outline-none transition-all duration-300"
+            className="w-full bg-purple-900/50 border-2 border-purple-600 text-white rounded-xl px-4 py-3 focus:border-purple-400 focus:outline-none transition-all duration-200"
           >
             <option value="">Select timeline</option>
             <option value="asap">ASAP</option>
@@ -324,7 +324,7 @@ export default function ModernContactForm() {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 resize-none rounded-xl transition-all duration-300 ${
+            className={`bg-purple-900/50 border-2 text-white placeholder:text-purple-400 focus:border-purple-400 resize-none rounded-xl transition-all duration-200 ${
               errors.message ? "border-red-400" : "border-purple-600"
             }`}
             placeholder="Tell us about your project, requirements, goals, and any specific needs or challenges you're facing..."
@@ -341,7 +341,7 @@ export default function ModernContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+          className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-4 rounded-xl text-lg font-semibold transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
         >
           {isSubmitting ? (
             <>

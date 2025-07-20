@@ -73,15 +73,15 @@ export default function ServicesGrid() {
       {services.map((service, index) => (
         <div
           key={index}
-          className="group bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:bg-purple-800/50"
+          className="group bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 hover:bg-purple-800/50"
         >
-          <div className="w-16 h-16 mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-0.5 group-hover:scale-110 transition-transform duration-300">
+          <div className="w-16 h-16 mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-0.5 group-hover:scale-110 transition-transform duration-200">
             <div className="w-full h-full rounded-full bg-purple-900 flex items-center justify-center">
               <service.icon className="w-8 h-8 text-white" />
             </div>
           </div>
 
-          <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-200 transition-colors duration-300">
+          <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-200 transition-colors duration-200">
             {service.title}
           </h3>
 
@@ -98,10 +98,10 @@ export default function ServicesGrid() {
 
           <Link
             href={`/services/${service.slug}`}
-            className="inline-flex items-center text-purple-400 group-hover:text-purple-300 transition-colors duration-300 font-medium"
+            className="inline-flex items-center text-purple-400 group-hover:text-purple-300 transition-colors duration-200 font-medium"
           >
             Learn More
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </div>
       ))}

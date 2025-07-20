@@ -78,13 +78,13 @@ export default function BlogGrid() {
       {blogPosts.map((post) => (
         <article
           key={post.id}
-          className="bg-purple-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 group"
+          className="bg-purple-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 group"
         >
           <div className="relative overflow-hidden">
             <img
               src={post.image || "/placeholder.svg"}
               alt={post.title}
-              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-200"
             />
             <div className="absolute top-4 left-4">
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -105,7 +105,7 @@ export default function BlogGrid() {
               </div>
             </div>
 
-            <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-200 transition-colors duration-300">
+            <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-200 transition-colors duration-200">
               {post.title}
             </h2>
 
@@ -119,10 +119,10 @@ export default function BlogGrid() {
 
               <Link
                 href={`/blog/${post.slug}`}
-                className="inline-flex items-center text-purple-400 group-hover:text-purple-300 transition-colors duration-300 font-medium"
+                className="inline-flex items-center text-purple-400 group-hover:text-purple-300 transition-colors duration-200 font-medium"
               >
                 Read More
-                <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
             </div>
           </div>
