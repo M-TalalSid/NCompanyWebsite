@@ -39,13 +39,13 @@ export default function HeroSection() {
             solutions crafted by expert developers.
           </p>
 
-          <Button
+          {/* <Button
             size="lg"
             className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 group"
           >
             Start Project
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </Button>
+          </Button> */}
         </div>
 
         {/* Right Content - Floating Circles */}

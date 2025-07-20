@@ -4,7 +4,7 @@ import Footer from "@/components/footer"
 import AboutHero from "@/components/about-hero"
 import TeamSection from "@/components/team-section"
 import CompanyValues from "@/components/company-values"
-import InteractiveTimeline from "@/components/interactive-timeline"
+// import InteractiveTimeline from "@/components/interactive-timeline"
 import { InteractiveStatsGrid } from "@/components/interactive-charts"
 import ScrollAnimation from "@/components/scroll-animations"
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </ScrollAnimation>
         <ScrollAnimation animation="scaleIn" delay={600}>
           <div className="container mx-auto px-4 py-16">
-            <InteractiveTimeline />
+            {/* <InteractiveTimeline /> */}
           </div>
         </ScrollAnimation>
         <ScrollAnimation animation="fadeInUp" delay={800}>

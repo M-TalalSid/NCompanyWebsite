@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Check, ArrowRight, Star, Clock, Users, Zap, Shield } from "lucide-react"
+import { Check, ArrowRight, Star, Clock, Users, Zap, Shield, Link2, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 interface ServiceDetailProps {
@@ -173,17 +173,29 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
   return (
     <div className="container mx-auto px-4 py-16">
+      {/* Back Button */}
+      <Link
+        href="/services"
+        className="inline-flex items-center  text-purple-400 hover:text-purple-300 transition-colors duration-300 mb-8"
+      >
+        <ArrowLeft className="w-4 h-4 mr-2 "  />
+        Back to Service
+      </Link>
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">{service.title}</h1>
         <p className="text-xl text-purple-200 max-w-3xl mx-auto mb-8">{service.description}</p>
-        <Button
+        
+        <Link href="/contact">
+          <Button
           size="lg"
           className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
         >
           Get Started
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
+        </Link>
+    
       </div>
 
       {/* Overview */}
@@ -335,7 +347,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
           Let's discuss how our {service.title.toLowerCase()} services can help transform your business.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact">
+          {/* <Link href="/contact">
             <Button
               size="lg"
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
@@ -343,12 +355,12 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </Link>
+          </Link> */}
           <Link href="/services">
             <Button
               size="lg"
               variant="outline"
-              className="border-purple-400 text-purple-200 hover:bg-purple-800/50 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-transparent"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
             >
               View All Services
             </Button>
