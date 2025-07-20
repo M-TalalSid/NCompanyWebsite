@@ -21,18 +21,18 @@ const services = [
     description: "Scalable cloud infrastructure and migration services for modern businesses.",
     slug: "cloud-solutions",
   },
-  {
-    icon: Brain,
-    title: "AI & Machine Learning",
-    description: "Intelligent solutions powered by artificial intelligence and machine learning.",
-    slug: "ai-machine-learning",
-  },
-  {
-    icon: Settings,
-    title: "DevOps & CI/CD",
-    description: "Streamlined development workflows and automated deployment pipelines.",
-    slug: "devops-cicd",
-  },
+  // {
+  //   icon: Brain,
+  //   title: "AI & Machine Learning",
+  //   description: "Intelligent solutions powered by artificial intelligence and machine learning.",
+  //   slug: "ai-machine-learning",
+  // },
+  // {
+  //   icon: Settings,
+  //   title: "DevOps & CI/CD",
+  //   description: "Streamlined development workflows and automated deployment pipelines.",
+  //   slug: "devops-cicd",
+  // },
   {
     icon: Shield,
     title: "Cybersecurity",
@@ -55,7 +55,7 @@ export default function ServicesPreview() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
           {services.map((service, index) => (
             <Link
               key={index}

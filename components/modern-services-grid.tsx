@@ -67,30 +67,30 @@ const services = [
     gradient: "from-teal-500 to-green-500",
     popular: false,
   },
-  {
-    icon: Brain,
-    title: "AI & Machine Learning",
-    description: "Intelligent solutions powered by artificial intelligence and machine learning technologies.",
-    features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Chatbots"],
-    slug: "ai-machine-learning",
-    price: "Starting at $20,000",
-    duration: "10-20 weeks",
-    complexity: "Very High",
-    gradient: "from-green-500 to-yellow-500",
-    popular: false,
-  },
-  {
-    icon: Settings,
-    title: "DevOps & CI/CD",
-    description: "Streamlined development workflows and automated deployment pipelines.",
-    features: ["Continuous Integration", "Automated Testing", "Deployment Automation", "Monitoring"],
-    slug: "devops-cicd",
-    price: "Starting at $7,000",
-    duration: "4-8 weeks",
-    complexity: "Medium",
-    gradient: "from-yellow-500 to-orange-500",
-    popular: false,
-  },
+  // {
+  //   icon: Brain,
+  //   title: "AI & Machine Learning",
+  //   description: "Intelligent solutions powered by artificial intelligence and machine learning technologies.",
+  //   features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Chatbots"],
+  //   slug: "ai-machine-learning",
+  //   price: "Starting at $20,000",
+  //   duration: "10-20 weeks",
+  //   complexity: "Very High",
+  //   gradient: "from-green-500 to-yellow-500",
+  //   popular: false,
+  // },
+  // {
+  //   icon: Settings,
+  //   title: "DevOps & CI/CD",
+  //   description: "Streamlined development workflows and automated deployment pipelines.",
+  //   features: ["Continuous Integration", "Automated Testing", "Deployment Automation", "Monitoring"],
+  //   slug: "devops-cicd",
+  //   price: "Starting at $7,000",
+  //   duration: "4-8 weeks",
+  //   complexity: "Medium",
+  //   gradient: "from-yellow-500 to-orange-500",
+  //   popular: false,
+  // },
   {
     icon: Shield,
     title: "Cybersecurity",
@@ -115,18 +115,18 @@ const services = [
     gradient: "from-red-500 to-pink-500",
     popular: false,
   },
-  {
-    icon: Zap,
-    title: "Digital Transformation",
-    description: "Complete digital transformation services to modernize your business processes.",
-    features: ["Process Automation", "Digital Strategy", "Technology Consulting", "Change Management"],
-    slug: "digital-transformation",
-    price: "Starting at $25,000",
-    duration: "12-24 weeks",
-    complexity: "Very High",
-    gradient: "from-pink-500 to-purple-500",
-    popular: false,
-  },
+  // {
+  //   icon: Zap,
+  //   title: "Digital Transformation",
+  //   description: "Complete digital transformation services to modernize your business processes.",
+  //   features: ["Process Automation", "Digital Strategy", "Technology Consulting", "Change Management"],
+  //   slug: "digital-transformation",
+  //   price: "Starting at $25,000",
+  //   duration: "12-24 weeks",
+  //   complexity: "Very High",
+  //   gradient: "from-pink-500 to-purple-500",
+  //   popular: false,
+  // },
 ]
 
 const complexityColors = {
@@ -277,13 +277,13 @@ export default function ModernServicesGrid() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="border-purple-400 text-purple-200 hover:bg-purple-800/50 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 bg-transparent"
               >
                 Schedule Consultation
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
