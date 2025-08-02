@@ -51,18 +51,18 @@ export default function ServicesHero() {
             className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 ${mounted ? "animate-fade-in-up" : "opacity-0"}`}
             style={{ animationDelay: "600ms" }}
           >
-            <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 group">
-              <Code className="w-12 h-12 text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
+            <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 group">
+              <Code className="w-12 h-12 text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-200" />
               <h3 className="text-xl font-bold text-white mb-2">Development</h3>
               <p className="text-purple-200 text-sm">Custom software, web, and mobile solutions</p>
             </div>
-            <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 group">
-              <Zap className="w-12 h-12 text-pink-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
+            <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 group">
+              <Zap className="w-12 h-12 text-pink-400 mb-4 group-hover:scale-110 transition-transform duration-200" />
               <h3 className="text-xl font-bold text-white mb-2">Innovation</h3>
               <p className="text-purple-200 text-sm">AI, machine learning, and emerging tech</p>
             </div>
-            <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 group">
-              <Sparkles className="w-12 h-12 text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
+            <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 group">
+              <Sparkles className="w-12 h-12 text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-200" />
               <h3 className="text-xl font-bold text-white mb-2">Optimization</h3>
               <p className="text-purple-200 text-sm">Cloud, DevOps, and performance solutions</p>
             </div>

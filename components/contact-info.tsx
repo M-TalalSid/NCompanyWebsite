@@ -84,7 +84,7 @@ export default function ContactInfo() {
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 text-center">
         <h3 className="text-xl font-bold text-white mb-2">Emergency Support</h3>
         <p className="text-purple-100 mb-4">For Existing Clients With Critical Issues</p>
-        <p className="text-white font-semibold">+1 (555) 911-HELP</p>
+        <p className="text-white font-semibold">+92 (301) 021-9324</p>
         <p className="text-purple-200 text-sm mt-2">Available 24/7</p>
       </div>
     </div>

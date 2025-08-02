@@ -4,7 +4,6 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
-import UserPreferences from "@/components/user-preferences"
 import PageTransitions from "@/components/page-transitions"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -25,7 +24,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <PageTransitions>{children}</PageTransitions>
-          <UserPreferences />
           <Toaster />
         </ThemeProvider>
       </body>

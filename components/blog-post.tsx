@@ -22,7 +22,7 @@ export default function BlogPost({ post }: BlogPostProps) {
       {/* Back Button */}
       <Link
         href="/blog"
-        className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 mb-8"
+        className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200 mb-8"
       >
         <ArrowLeft className="w-4 h-4 mr-2" />
         Back to Blog
@@ -129,7 +129,7 @@ export default function BlogPost({ post }: BlogPostProps) {
         <Link href="/blog">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105"
           >
             View All Posts
           </Button>

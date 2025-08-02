@@ -164,7 +164,7 @@ export default function ModernServicesGrid() {
             <button
               key={tab.key}
               onClick={() => setFilter(tab.key)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                 filter === tab.key
                   ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-105"
                   : "bg-purple-800/30 text-purple-200 hover:bg-purple-700/50 hover:text-white"
@@ -180,7 +180,7 @@ export default function ModernServicesGrid() {
           {filteredServices.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-purple-800/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-purple-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:bg-purple-800/50"
+              className="group relative bg-purple-800/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-purple-700/50 hover:border-purple-500/50 transition-all duration-400 hover:scale-105 hover:bg-purple-800/50"
             >
               {/* Popular Badge */}
               {service.popular && (
@@ -199,7 +199,7 @@ export default function ModernServicesGrid() {
                 {/* Icon and Title */}
                 <div className="flex items-start justify-between mb-6">
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} p-0.5 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} p-0.5 group-hover:scale-110 transition-transform duration-200`}
                   >
                     <div className="w-full h-full rounded-2xl bg-purple-900 flex items-center justify-center">
                       <service.icon className="w-8 h-8 text-white" />
@@ -211,7 +211,7 @@ export default function ModernServicesGrid() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-200 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-200 transition-colors duration-200">
                   {service.title}
                 </h3>
 
@@ -248,10 +248,10 @@ export default function ModernServicesGrid() {
                 {/* CTA Button */}
                 <Link href={`/services/${service.slug}`}>
                   <Button
-                    className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg hover:shadow-purple-500/25 text-white font-semibold py-3 rounded-xl transition-all duration-300 group-hover:scale-105`}
+                    className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg hover:shadow-purple-500/25 text-white font-semibold py-3 rounded-xl transition-all duration-200 group-hover:scale-105`}
                   >
                     Learn More & Pricing
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </Button>
                 </Link>
               </div>
@@ -271,7 +271,7 @@ export default function ModernServicesGrid() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105"
                 >
                   Get Custom Quote
                   <ArrowRight className="ml-2 h-5 w-5" />

@@ -176,7 +176,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       {/* Back Button */}
       <Link
         href="/services"
-        className="inline-flex items-center  text-purple-400 hover:text-purple-300 transition-colors duration-300 mb-8"
+        className="inline-flex items-center  text-purple-400 hover:text-purple-300 transition-colors duration-200 mb-8"
       >
         <ArrowLeft className="w-4 h-4 mr-2 "  />
         Back to Service
@@ -189,7 +189,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         <Link href="/contact">
           <Button
           size="lg"
-          className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+          className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105"
         >
           Get Started
           <ArrowRight className="ml-2 h-5 w-5" />
@@ -233,7 +233,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
           {pricing.packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative bg-purple-800/30 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-300 hover:scale-105 ${
+              className={`relative bg-purple-800/30 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-200 hover:scale-105 ${
                 pkg.popular
                   ? "border-purple-400 shadow-lg shadow-purple-500/25"
                   : "border-purple-700/50 hover:border-purple-500/50"
@@ -270,7 +270,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               </ul>
 
               <Button
-                className={`w-full py-3 rounded-xl font-semibold transition-all duration-300 ${
+                className={`w-full py-3 rounded-xl font-semibold transition-all duration-200 ${
                   pkg.popular
                     ? "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white hover:scale-105"
                     : "bg-purple-700 hover:bg-purple-600 text-white"
@@ -311,7 +311,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
           {service.features.map((feature, index) => (
             <div
               key={index}
-              className="bg-purple-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
+              className="bg-purple-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center mb-4">
                 <Star className="w-6 h-6 text-white" />
@@ -360,7 +360,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             <Button
               size="lg"
               variant="outline"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105"
             >
               View All Services
             </Button>
