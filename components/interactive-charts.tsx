@@ -230,11 +230,11 @@ export function InteractiveBarChart() {
   )
 }
 
-export function InteractiveStatsGrid() {
+export function  InteractiveStatsGrid() {
   const [counters, setCounters] = useState({ projects: 0, clients: 0, satisfaction: 0, experience: 0 })
 
   useEffect(() => {
-    const targets = { projects: 50, clients: 98, satisfaction: 99, experience: 2   }
+    const targets = { projects: 50, clients: 50 , satisfaction: 98, experience: 2   }
     const duration = 2000
     const steps = 60
 
