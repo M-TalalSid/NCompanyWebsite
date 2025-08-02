@@ -11,7 +11,7 @@ export default function ContactHero() {
   }, [])
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -44,7 +44,7 @@ export default function ContactHero() {
           </p>
 
           {/* Quick Contact Options */}
-          <div
+          {/* <div
             className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 ${mounted ? "animate-fade-in-up" : "opacity-0"}`}
             style={{ animationDelay: "600ms" }}
           >
@@ -66,7 +66,7 @@ export default function ContactHero() {
               <p className="text-purple-200 text-sm">Available Now</p>
               <p className="text-purple-300 text-xs mt-1">Instant Support</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

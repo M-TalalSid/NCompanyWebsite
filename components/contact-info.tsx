@@ -2,7 +2,7 @@ import { MapPin, Mail, Phone, Clock, MessageCircle } from "lucide-react"
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 mb-20">
       {/* Contact Details */}
       <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50">
         <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>

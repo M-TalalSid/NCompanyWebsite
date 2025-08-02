@@ -172,7 +172,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
   const pricing = servicePricing[service.title as keyof typeof servicePricing] || servicePricing.default
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 ">
       {/* Back Button */}
       <Link
         href="/services"

@@ -40,6 +40,39 @@ const testimonials = [
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
+  {
+    name: "Sarah Malik",
+    company: "EcoNest Interiors",
+    role: "Creative Director",
+    content: "NexaForge delivered beyond expectations. Their solutions are both scalable and elegant.",
+    rating: 5,
+    image: "/placeholder.svg?height=80&width=80"
+  },
+  {
+    name: "James Carter",
+    company: "Finwise Analytics",
+    role: "CTO",
+    content: "Efficient and technically sound. Our team productivity has soared since collaborating with NexaForge.",
+    rating: 4,
+    image: "/placeholder.svg?height=80&width=80"
+  },
+  {
+    name: "Aisha Rehman",
+    company: "BrightEdTech",
+    role: "Founder & CEO",
+    content: "They truly understand startup challenges. NexaForge was a game changer for our product launch.",
+    rating: 5,
+    image: "/placeholder.svg?height=80&width=80"
+  },
+  {
+    name: "Liam Nguyen",
+    company: "SecureNet Solutions",
+    role: "Head of Engineering",
+    content: "Solid performance under pressure. Their cloud migration strategy saved us weeks of work.",
+    rating: 4,
+    image: "/placeholder.svg?height=80&width=80"
+  },
+  
 ]
 
 export default function TestimonialsSection() {
@@ -65,7 +98,7 @@ export default function TestimonialsSection() {
   if (!mounted) return null
 
   return (
-    <section className="py-20 relative">
+    <section className="">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">

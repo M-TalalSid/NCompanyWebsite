@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900">
       <Header />
-      <main className="pt-20">
+      <main className="">
         <ScrollAnimation animation="fadeInUp">
           <AboutHero />
         </ScrollAnimation>
