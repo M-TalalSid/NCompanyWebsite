@@ -6,7 +6,7 @@ import { RotateCcw, Star, Users, TrendingUp } from "lucide-react"
 const stats = [
   {
     icon: RotateCcw,
-    number: "500+",
+    number: "50+",
     label: "Projects Completed",
     color: "from-purple-400 to-pink-400",
   },
@@ -18,13 +18,13 @@ const stats = [
   },
   {
     icon: Users,
-    number: "50+",
+    number: "20+",
     label: "Team Members",
     color: "from-blue-400 to-purple-400",
   },
   {
     icon: TrendingUp,
-    number: "6+",
+    number: "2+",
     label: "Years Experience",
     color: "from-green-400 to-blue-400",
   },
@@ -38,7 +38,7 @@ export default function StatsSection() {
   }, [])
 
   return (
-    <section className="py-20 relative">
+    <section className="">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

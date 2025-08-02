@@ -18,7 +18,7 @@ interface BlogPostProps {
 
 export default function BlogPost({ post }: BlogPostProps) {
   return (
-    <article className="container mx-auto px-4 py-16 max-w-4xl">
+    <article className="container mx-auto px-4 mb-16 max-w-4xl">
       {/* Back Button */}
       <Link
         href="/blog"

@@ -24,7 +24,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Abdul Ahad",
+    name: "Abdul Ahad Afridi",
     role: "Lead Developer",
     image: "/placeholder.svg?height=300&width=300",
     bio: "Full-stack developer passionate about clean code and innovative solutions.",

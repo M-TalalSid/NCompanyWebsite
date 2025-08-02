@@ -234,7 +234,7 @@ export function InteractiveStatsGrid() {
   const [counters, setCounters] = useState({ projects: 0, clients: 0, satisfaction: 0, experience: 0 })
 
   useEffect(() => {
-    const targets = { projects: 500, clients: 150, satisfaction: 99, experience: 6 }
+    const targets = { projects: 50, clients: 98, satisfaction: 99, experience: 2   }
     const duration = 2000
     const steps = 60
 
