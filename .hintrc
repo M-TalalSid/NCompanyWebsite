@@ -12,7 +12,9 @@
     ],
     "axe/name-role-value": [
       "default",
-      {main
+      {
+        "main": "off",
+        "name-link": "off"
       }
     ]
   }
