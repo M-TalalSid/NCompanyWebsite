@@ -75,7 +75,7 @@ const testimonials = [
   
 ]
 
-export default function TestimonialsSection() {
+export default function   TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [mounted, setMounted] = useState(false)
 
@@ -99,7 +99,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className="">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             What Our{" "}
