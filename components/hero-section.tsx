@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -21,7 +21,11 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Content */}
-        <div className={`space-y-8 ${mounted ? "animate-fade-in-up" : "opacity-0"}`}>
+        <div
+          className={`space-y-8 ${
+            mounted ? "animate-fade-in-up" : "opacity-0"
+          }`}
+        >
           <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
             Unlock Premium{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -35,8 +39,9 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-xl text-purple-100 leading-relaxed max-w-2xl">
-            Transform your business with cutting-edge custom software development, web applications, and digital
-            solutions crafted by expert developers.
+            Transform your business with cutting-edge custom software
+            development, web applications, and digital solutions crafted by
+            expert developers.
           </p>
 
           {/* <Button
@@ -54,7 +59,7 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function FloatingCircles() {
@@ -117,5 +122,5 @@ function FloatingCircles() {
         </div>
       </div>
     </div>
-  )
+  );
 }

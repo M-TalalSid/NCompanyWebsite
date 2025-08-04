@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Calendar, User, ArrowRight, Clock } from "lucide-react"
+import Link from "next/link";
+import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 
 const blogPosts = [
   {
@@ -29,7 +29,8 @@ const blogPosts = [
   {
     id: 3,
     title: "Modern DevOps Practices for 2025",
-    excerpt: "Discover the latest DevOps trends and practices that are shaping software delivery in 2025.",
+    excerpt:
+      "Discover the latest DevOps trends and practices that are shaping software delivery in 2025.",
     author: "David Kim",
     date: "2025-01-10",
     readTime: "10 min read",
@@ -40,7 +41,8 @@ const blogPosts = [
   {
     id: 4,
     title: "Cybersecurity Best Practices for Developers",
-    excerpt: "Essential security practices every developer should implement to protect applications from threats.",
+    excerpt:
+      "Essential security practices every developer should implement to protect applications from threats.",
     author: "Alex Johnson",
     date: "2025-01-08",
     readTime: "15 min read",
@@ -51,7 +53,8 @@ const blogPosts = [
   {
     id: 5,
     title: "The Rise of Low-Code Development",
-    excerpt: "How low-code platforms are changing the software development landscape and when to use them.",
+    excerpt:
+      "How low-code platforms are changing the software development landscape and when to use them.",
     author: "Emily Thompson",
     date: "2025-01-05",
     readTime: "7 min read",
@@ -62,7 +65,8 @@ const blogPosts = [
   {
     id: 6,
     title: "Mobile App Performance Optimization",
-    excerpt: "Techniques and strategies to optimize mobile app performance for better user experience.",
+    excerpt:
+      "Techniques and strategies to optimize mobile app performance for better user experience.",
     author: "Lisa Wang",
     date: "2025-01-03",
     readTime: "11 min read",
@@ -70,7 +74,7 @@ const blogPosts = [
     image: "/placeholder.svg?height=300&width=500",
     slug: "mobile-app-performance-optimization",
   },
-]
+];
 
 export default function BlogGrid() {
   return (
@@ -129,5 +133,5 @@ export default function BlogGrid() {
         </article>
       ))}
     </div>
-  )
+  );
 }

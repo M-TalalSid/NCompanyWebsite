@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { RotateCcw, Star, Users, TrendingUp } from "lucide-react"
+import { useEffect, useState } from "react";
+import { RotateCcw, Star, Users, TrendingUp } from "lucide-react";
 
 const stats = [
   {
@@ -28,14 +28,14 @@ const stats = [
     label: "Years Experience",
     color: "from-green-400 to-blue-400",
   },
-]
+];
 
 export default function StatsSection() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <section className="">
@@ -49,17 +49,21 @@ export default function StatsSection() {
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${stat.color} p-0.5`}>
+              <div
+                className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${stat.color} p-0.5`}
+              >
                 <div className="w-full h-full rounded-full bg-purple-900 flex items-center justify-center">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-4xl font-bold text-white mb-2">
+                {stat.number}
+              </div>
               <div className="text-purple-200">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

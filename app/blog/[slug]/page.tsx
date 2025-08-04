@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import BlogPost from "@/components/blog-post"
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import BlogPost from "@/components/blog-post";
 
 const blogPosts = {
   "future-of-ai-in-software-development": {
@@ -82,7 +82,8 @@ const blogPosts = {
   },
   "modern-devops-practices-2025": {
     title: "Modern DevOps Practices for 2025",
-    excerpt: "Discover the latest DevOps trends and practices that are shaping software delivery in 2025.",
+    excerpt:
+      "Discover the latest DevOps trends and practices that are shaping software delivery in 2025.",
     author: "David Kim",
     date: "2025-01-10",
     readTime: "10 min read",
@@ -130,7 +131,8 @@ const blogPosts = {
   },
   "cybersecurity-best-practices-developers": {
     title: "Cybersecurity Best Practices for Developers",
-    excerpt: "Essential security practices every developer should implement to protect applications from threats.",
+    excerpt:
+      "Essential security practices every developer should implement to protect applications from threats.",
     author: "Alex Johnson",
     date: "2025-01-08",
     readTime: "15 min read",
@@ -199,7 +201,8 @@ const blogPosts = {
   },
   "rise-of-low-code-development": {
     title: "The Rise of Low-Code Development",
-    excerpt: "How low-code platforms are changing the software development landscape and when to use them.",
+    excerpt:
+      "How low-code platforms are changing the software development landscape and when to use them.",
     author: "Emily Thompson",
     date: "2025-01-05",
     readTime: "7 min read",
@@ -254,7 +257,8 @@ const blogPosts = {
   },
   "mobile-app-performance-optimization": {
     title: "Mobile App Performance Optimization",
-    excerpt: "Techniques and strategies to optimize mobile app performance for better user experience.",
+    excerpt:
+      "Techniques and strategies to optimize mobile app performance for better user experience.",
     author: "Lisa Wang",
     date: "2025-01-03",
     readTime: "11 min read",
@@ -335,35 +339,35 @@ const blogPosts = {
       <p>Remember that performance optimization is an ongoing process. Start with measuring current performance, identify bottlenecks, implement optimizations, and continuously monitor the results. Focus on the optimizations that will have the most significant impact on your users' experience.</p>
     `,
   },
-}
+};
 
 interface Props {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const post = blogPosts[slug as keyof typeof blogPosts]
+  const { slug } = await params;
+  const post = blogPosts[slug as keyof typeof blogPosts];
 
   if (!post) {
     return {
       title: "Post Not Found - NexaForge Blog",
-    }
+    };
   }
 
   return {
     title: `${post.title} - NexaForge Blog`,
     description: post.excerpt,
     keywords: `${post.category.toLowerCase()}, software development, ${post.title.toLowerCase()}`,
-  }
+  };
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params
-  const post = blogPosts[slug as keyof typeof blogPosts]
+  const { slug } = await params;
+  const post = blogPosts[slug as keyof typeof blogPosts];
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -374,11 +378,11 @@ export default async function BlogPostPage({ params }: Props) {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
 export async function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({
     slug,
-  }))
+  }));
 }

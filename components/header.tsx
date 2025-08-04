@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -22,14 +22,13 @@ export default function Header() {
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact Us" },
-
-  ]
+  ];
 
   return (
     <header
-      // className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      //   isScrolled ? "bg-purple-900/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-      // }`}
+    // className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    //   isScrolled ? "bg-purple-900/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+    // }`}
     >
       <div className="container mx-auto px-4 py-4 ">
         <div className="flex items-center justify-between">
@@ -57,16 +56,19 @@ export default function Header() {
 
           {/* Desktop CTA Buttons */}
           {/* <div className="hidden md:flex items-center space-x-4"> */}
-            {/* <Button variant="ghost" className="text-white hover:text-purple-200">
+          {/* <Button variant="ghost" className="text-white hover:text-purple-200">
               Log In
             </Button> */}
-            {/* <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105">
+          {/* <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105">
               Get Started
             </Button> */}
           {/* </div> */}
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button
+            className="md:hidden text-white p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -98,5 +100,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

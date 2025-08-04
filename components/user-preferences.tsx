@@ -1,17 +1,26 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Settings, Palette, Moon, Sun, Monitor, Save, User, Eye } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import {
+  Settings,
+  Palette,
+  Moon,
+  Sun,
+  Monitor,
+  Save,
+  User,
+  Eye,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface UserPreferences {
-  theme: "light" | "dark" | "system"
-  colorScheme: "purple" | "blue" | "green" | "orange"
-  animations: boolean
-  notifications: boolean
-  autoSave: boolean
-  language: string
-  fontSize: "small" | "medium" | "large"
+  theme: "light" | "dark" | "system";
+  colorScheme: "purple" | "blue" | "green" | "orange";
+  animations: boolean;
+  notifications: boolean;
+  autoSave: boolean;
+  language: string;
+  fontSize: "small" | "medium" | "large";
 }
 
 const defaultPreferences: UserPreferences = {
@@ -22,50 +31,63 @@ const defaultPreferences: UserPreferences = {
   autoSave: true,
   language: "en",
   fontSize: "medium",
-}
+};
 
 export default function UserPreferences() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [preferences, setPreferences] = useState<UserPreferences>(defaultPreferences)
-  const [hasChanges, setHasChanges] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [preferences, setPreferences] =
+    useState<UserPreferences>(defaultPreferences);
+  const [hasChanges, setHasChanges] = useState(false);
 
   useEffect(() => {
     // Load preferences from localStorage
-    const saved = localStorage.getItem("nexaforge-preferences")
+    const saved = localStorage.getItem("nexaforge-preferences");
     if (saved) {
       try {
-        const parsedPreferences = JSON.parse(saved)
-        setPreferences({ ...defaultPreferences, ...parsedPreferences })
+        const parsedPreferences = JSON.parse(saved);
+        setPreferences({ ...defaultPreferences, ...parsedPreferences });
       } catch (error) {
-        console.error("Error loading preferences:", error)
+        console.error("Error loading preferences:", error);
       }
     }
-  }, [])
+  }, []);
 
-  const updatePreference = <K extends keyof UserPreferences>(key: K, value: UserPreferences[K]) => {
-    setPreferences((prev) => ({ ...prev, [key]: value }))
-    setHasChanges(true)
-  }
+  const updatePreference = <K extends keyof UserPreferences>(
+    key: K,
+    value: UserPreferences[K]
+  ) => {
+    setPreferences((prev) => ({ ...prev, [key]: value }));
+    setHasChanges(true);
+  };
 
   const savePreferences = () => {
-    localStorage.setItem("nexaforge-preferences", JSON.stringify(preferences))
-    setHasChanges(false)
+    localStorage.setItem("nexaforge-preferences", JSON.stringify(preferences));
+    setHasChanges(false);
 
     // Apply theme changes
-    document.documentElement.setAttribute("data-theme", preferences.theme)
-    document.documentElement.setAttribute("data-color-scheme", preferences.colorScheme)
-    document.documentElement.setAttribute("data-animations", preferences.animations.toString())
-    document.documentElement.setAttribute("data-font-size", preferences.fontSize)
+    document.documentElement.setAttribute("data-theme", preferences.theme);
+    document.documentElement.setAttribute(
+      "data-color-scheme",
+      preferences.colorScheme
+    );
+    document.documentElement.setAttribute(
+      "data-animations",
+      preferences.animations.toString()
+    );
+    document.documentElement.setAttribute(
+      "data-font-size",
+      preferences.fontSize
+    );
 
     // Show success message
-    const event = new CustomEvent("preferences-saved", { detail: preferences })
-    window.dispatchEvent(event)
-  }
+    const event = new CustomEvent("preferences-saved", { detail: preferences });
+    window.dispatchEvent(event);
+  };
 
   const resetPreferences = () => {
-    setPreferences(defaultPreferences)
-    setHasChanges(true)
-  }
+    setPreferences(defaultPreferences);
+    setHasChanges(true);
+  };
 
   if (!isOpen) {
     return (
@@ -76,7 +98,7 @@ export default function UserPreferences() {
       >
         <Settings className="w-6 h-6" />
       </button>
-    )
+    );
   }
 
   return (
@@ -113,7 +135,9 @@ export default function UserPreferences() {
                   ].map((theme) => (
                     <button
                       key={theme.value}
-                      onClick={() => updatePreference("theme", theme.value as any)}
+                      onClick={() =>
+                        updatePreference("theme", theme.value as any)
+                      }
                       className={`flex items-center justify-center space-x-2 p-3 rounded-xl border transition-all duration-300 ${
                         preferences.theme === theme.value
                           ? "border-purple-400 bg-purple-700/50 text-white"
@@ -128,7 +152,9 @@ export default function UserPreferences() {
               </div>
 
               <div>
-                <label className="block text-purple-200 mb-2">Color Scheme</label>
+                <label className="block text-purple-200 mb-2">
+                  Color Scheme
+                </label>
                 <div className="grid grid-cols-4 gap-3">
                   {[
                     { value: "purple", color: "from-purple-500 to-pink-500" },
@@ -138,8 +164,12 @@ export default function UserPreferences() {
                   ].map((scheme) => (
                     <button
                       key={scheme.value}
-                      onClick={() => updatePreference("colorScheme", scheme.value as any)}
-                      className={`h-12 rounded-xl bg-gradient-to-r ${scheme.color} transition-all duration-300 ${
+                      onClick={() =>
+                        updatePreference("colorScheme", scheme.value as any)
+                      }
+                      className={`h-12 rounded-xl bg-gradient-to-r ${
+                        scheme.color
+                      } transition-all duration-300 ${
                         preferences.colorScheme === scheme.value
                           ? "ring-2 ring-white ring-offset-2 ring-offset-purple-900 scale-110"
                           : "hover:scale-105"
@@ -159,7 +189,9 @@ export default function UserPreferences() {
                   ].map((size) => (
                     <button
                       key={size.value}
-                      onClick={() => updatePreference("fontSize", size.value as any)}
+                      onClick={() =>
+                        updatePreference("fontSize", size.value as any)
+                      }
                       className={`p-3 rounded-xl border transition-all duration-300 ${
                         preferences.fontSize === size.value
                           ? "border-purple-400 bg-purple-700/50 text-white"
@@ -167,7 +199,13 @@ export default function UserPreferences() {
                       }`}
                     >
                       <span
-                        className={`${size.value === "small" ? "text-sm" : size.value === "large" ? "text-lg" : ""}`}
+                        className={`${
+                          size.value === "small"
+                            ? "text-sm"
+                            : size.value === "large"
+                            ? "text-lg"
+                            : ""
+                        }`}
                       >
                         {size.label}
                       </span>
@@ -186,29 +224,54 @@ export default function UserPreferences() {
             </h3>
             <div className="space-y-4">
               {[
-                { key: "animations", label: "Enable Animations", description: "Smooth transitions and effects" },
-                { key: "notifications", label: "Notifications", description: "Receive updates and alerts" },
-                { key: "autoSave", label: "Auto Save", description: "Automatically save your preferences" },
+                {
+                  key: "animations",
+                  label: "Enable Animations",
+                  description: "Smooth transitions and effects",
+                },
+                {
+                  key: "notifications",
+                  label: "Notifications",
+                  description: "Receive updates and alerts",
+                },
+                {
+                  key: "autoSave",
+                  label: "Auto Save",
+                  description: "Automatically save your preferences",
+                },
               ].map((setting) => (
-                <div key={setting.key} className="flex items-center justify-between p-4 bg-purple-800/30 rounded-xl">
+                <div
+                  key={setting.key}
+                  className="flex items-center justify-between p-4 bg-purple-800/30 rounded-xl"
+                >
                   <div>
-                    <div className="text-white font-medium">{setting.label}</div>
-                    <div className="text-purple-300 text-sm">{setting.description}</div>
+                    <div className="text-white font-medium">
+                      {setting.label}
+                    </div>
+                    <div className="text-purple-300 text-sm">
+                      {setting.description}
+                    </div>
                   </div>
                   <button
                     onClick={() =>
                       updatePreference(
                         setting.key as keyof UserPreferences,
-                        !preferences[setting.key as keyof UserPreferences] as any,
+                        !preferences[
+                          setting.key as keyof UserPreferences
+                        ] as any
                       )
                     }
                     className={`relative w-12 h-6 rounded-full transition-all duration-300 ${
-                      preferences[setting.key as keyof UserPreferences] ? "bg-purple-500" : "bg-purple-700"
+                      preferences[setting.key as keyof UserPreferences]
+                        ? "bg-purple-500"
+                        : "bg-purple-700"
                     }`}
                   >
                     <div
                       className={`absolute top-0.5 w-5 h-5 bg-white rounded-full transition-all duration-300 ${
-                        preferences[setting.key as keyof UserPreferences] ? "left-6" : "left-0.5"
+                        preferences[setting.key as keyof UserPreferences]
+                          ? "left-6"
+                          : "left-0.5"
                       }`}
                     />
                   </button>
@@ -264,5 +327,5 @@ export default function UserPreferences() {
         </div>
       </div>
     </div>
-  )
+  );
 }

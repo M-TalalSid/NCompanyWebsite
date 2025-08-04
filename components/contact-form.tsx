@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Send, CheckCircle } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Send, CheckCircle } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -16,30 +16,34 @@ export default function ContactForm() {
     phone: "",
     service: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setIsSubmitting(false);
+    setIsSubmitted(true);
 
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      setIsSubmitted(false);
       setFormData({
         name: "",
         email: "",
@@ -47,9 +51,9 @@ export default function ContactForm() {
         phone: "",
         service: "",
         message: "",
-      })
-    }, 3000)
-  }
+      });
+    }, 3000);
+  };
 
   if (isSubmitted) {
     return (
@@ -57,10 +61,11 @@ export default function ContactForm() {
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-6" />
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-purple-200">
-          Your message has been sent successfully. We'll get back to you within 24 hours.
+          Your message has been sent successfully. We'll get back to you within
+          24 hours.
         </p>
       </div>
-    )
+    );
   }
 
   return (
@@ -70,7 +75,10 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-purple-200 mb-2 font-medium">
+            <label
+              htmlFor="name"
+              className="block text-purple-200 mb-2 font-medium"
+            >
               Full Name *
             </label>
             <Input
@@ -85,7 +93,10 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-purple-200 mb-2 font-medium">
+            <label
+              htmlFor="email"
+              className="block text-purple-200 mb-2 font-medium"
+            >
               Email Address *
             </label>
             <Input
@@ -103,7 +114,10 @@ export default function ContactForm() {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="block text-purple-200 mb-2 font-medium">
+            <label
+              htmlFor="company"
+              className="block text-purple-200 mb-2 font-medium"
+            >
               Company
             </label>
             <Input
@@ -117,7 +131,10 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-purple-200 mb-2 font-medium">
+            <label
+              htmlFor="phone"
+              className="block text-purple-200 mb-2 font-medium"
+            >
               Phone Number
             </label>
             <Input
@@ -133,7 +150,10 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="service" className="block text-purple-200 mb-2 font-medium">
+          <label
+            htmlFor="service"
+            className="block text-purple-200 mb-2 font-medium"
+          >
             Service Interested In
           </label>
           <select
@@ -152,12 +172,17 @@ export default function ContactForm() {
             <option value="devops">DevOps & CI/CD</option>
             <option value="cybersecurity">Cybersecurity</option>
             <option value="data-analytics">Data Analytics</option>
-            <option value="digital-transformation">Digital Transformation</option>
+            <option value="digital-transformation">
+              Digital Transformation
+            </option>
           </select>
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-purple-200 mb-2 font-medium">
+          <label
+            htmlFor="message"
+            className="block text-purple-200 mb-2 font-medium"
+          >
             Project Details *
           </label>
           <Textarea
@@ -191,5 +216,5 @@ export default function ContactForm() {
         </Button>
       </form>
     </div>
-  )
+  );
 }

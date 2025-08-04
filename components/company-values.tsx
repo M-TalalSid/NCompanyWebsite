@@ -1,31 +1,35 @@
-import { Lightbulb, Shield, Users, Zap } from "lucide-react"
+import { Lightbulb, Shield, Users, Zap } from "lucide-react";
 
 const values = [
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "We embrace cutting-edge technologies and creative solutions to solve complex challenges.",
+    description:
+      "We embrace cutting-edge technologies and creative solutions to solve complex challenges.",
     color: "from-yellow-400 to-orange-400",
   },
   {
     icon: Shield,
     title: "Quality",
-    description: "We maintain the highest standards in code quality, security, and performance.",
+    description:
+      "We maintain the highest standards in code quality, security, and performance.",
     color: "from-green-400 to-blue-400",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "We work closely with our clients as partners to achieve shared success.",
+    description:
+      "We work closely with our clients as partners to achieve shared success.",
     color: "from-purple-400 to-pink-400",
   },
   {
     icon: Zap,
     title: "Excellence",
-    description: "We strive for excellence in every project, delivering beyond expectations.",
+    description:
+      "We strive for excellence in every project, delivering beyond expectations.",
     color: "from-blue-400 to-purple-400",
   },
-]
+];
 
 export default function CompanyValues() {
   return (
@@ -34,7 +38,9 @@ export default function CompanyValues() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Values</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Values
+            </span>
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
             The principles that guide our work and define our culture
@@ -54,12 +60,16 @@ export default function CompanyValues() {
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
-              <p className="text-purple-200 leading-relaxed">{value.description}</p>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {value.title}
+              </h3>
+              <p className="text-purple-200 leading-relaxed">
+                {value.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

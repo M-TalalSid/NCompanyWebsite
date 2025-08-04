@@ -6,7 +6,8 @@ const teamMembers = [
     role: "Co-Founder & CEO",
     image: "/myprofilepic.webp",
     bio: "Visionary leader with 15+ years in software development and business strategy.",
-    quote: "I believe success lies in merging vision with action — and inspiring others to do the same.",
+    quote:
+      "I believe success lies in merging vision with action — and inspiring others to do the same.",
     social: {
       linkedin: "https://www.linkedin.com/in/m-talal-shoaib/",
       twitter: "https://x.com/MTalalSid",
@@ -19,7 +20,8 @@ const teamMembers = [
     role: "Co-Founder & Managing Director",
     image: "/minhajprofilepic.webp",
     bio: "Technical expert specializing in scalable architecture and emerging technologies.",
-    quote: "Great teams build great tech. I’m here to lead, learn, and level up together.",
+    quote:
+      "Great teams build great tech. I’m here to lead, learn, and level up together.",
     social: {
       linkedin: "https://www.linkedin.com/in/minhaj-azeem-35a82a213/",
       twitter: "https://x.com/minhaj_azeem",
@@ -44,7 +46,8 @@ const teamMembers = [
     role: "UX/UI Designer",
     image: "wahidprofilepic.webp",
     bio: "Creative designer focused on user-centered design and exceptional experiences.",
-    quote: "Every pixel should have a purpose. Design is where empathy meets innovation.",
+    quote:
+      "Every pixel should have a purpose. Design is where empathy meets innovation.",
     social: {
       linkedin: "https://www.linkedin.com/in/abdul-wahid-chohan/",
       twitter: "https://x.com/AbdulWahidChoh4",
@@ -57,7 +60,8 @@ const teamMembers = [
     role: "DevOps Engineer",
     image: "hammadprofilepic.webp",
     bio: "Infrastructure specialist ensuring reliable, scalable, and secure deployments.",
-    quote: "Behind every smooth deployment is a thousand lines of invisible preparation.",
+    quote:
+      "Behind every smooth deployment is a thousand lines of invisible preparation.",
     social: {
       linkedin: "https://www.linkedin.com/in/hammad-abbasi-95388628b/",
       twitter: "https://x.com/HammadAbbasii01",
@@ -70,7 +74,8 @@ const teamMembers = [
     role: "Project Manager",
     image: "saadprofilepic.webp",
     bio: "Experienced PM ensuring projects are delivered on time and exceed expectations.",
-    quote: "A good plan today is better than a perfect plan tomorrow. Let’s execute with clarity.",
+    quote:
+      "A good plan today is better than a perfect plan tomorrow. Let’s execute with clarity.",
     social: {
       linkedin: "https://www.linkedin.com/in/saaddarbari/",
       twitter: "https://x.com/Saad_Darbari",
@@ -83,7 +88,8 @@ const teamMembers = [
     role: "Marketing Specialist",
     image: "zainprofilepic.webp",
     bio: "Marketing expert driving brand awareness and customer engagement.",
-    quote: "If you speak to everyone, you speak to no one. Precision builds powerful brands.",
+    quote:
+      "If you speak to everyone, you speak to no one. Precision builds powerful brands.",
     social: {
       linkedin: "https://www.linkedin.com/in/zain-ul-abideen00/",
       twitter: "https://x.com/djzain33",

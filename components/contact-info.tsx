@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Clock, MessageCircle } from "lucide-react"
+import { MapPin, Mail, Phone, Clock, MessageCircle } from "lucide-react";
 
 export default function ContactInfo() {
   return (
@@ -70,7 +70,8 @@ export default function ContactInfo() {
           <h3 className="text-xl font-bold text-white">Quick Response</h3>
         </div>
         <p className="text-purple-200 mb-4">
-          Need immediate assistance? We typically respond to inquiries within 2-4 hours during business hours.
+          Need immediate assistance? We typically respond to inquiries within
+          2-4 hours during business hours.
         </p>
         <div className="space-y-2 text-sm text-purple-300">
           <p>• Free Consultation Available</p>
@@ -83,10 +84,12 @@ export default function ContactInfo() {
       {/* Emergency Contact */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 text-center">
         <h3 className="text-xl font-bold text-white mb-2">Emergency Support</h3>
-        <p className="text-purple-100 mb-4">For Existing Clients With Critical Issues</p>
+        <p className="text-purple-100 mb-4">
+          For Existing Clients With Critical Issues
+        </p>
         <p className="text-white font-semibold">+92 (301) 021-9324</p>
         <p className="text-purple-200 text-sm mt-2">Available 24/7</p>
       </div>
     </div>
-  )
+  );
 }

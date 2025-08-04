@@ -1,26 +1,36 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Send, CheckCircle, AlertCircle, User, Mail, Building, Phone, MessageSquare, DollarSign } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Send,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Mail,
+  Building,
+  Phone,
+  MessageSquare,
+  DollarSign,
+} from "lucide-react";
 
 interface FormData {
-  name: string
-  email: string
-  company: string
-  phone: string
-  service: string
-  budget: string
-  timeline: string
-  message: string
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  service: string;
+  budget: string;
+  timeline: string;
+  message: string;
 }
 
 interface FormErrors {
-  [key: string]: string
+  [key: string]: string;
 }
 
 export default function ModernContactForm() {
@@ -33,77 +43,82 @@ export default function ModernContactForm() {
     budget: "",
     timeline: "",
     message: "",
-  })
+  });
 
-  const [errors, setErrors] = useState<FormErrors>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {}
+    const newErrors: FormErrors = {};
 
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
+      newErrors.name = "Name is required";
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters"
+      newErrors.name = "Name must be at least 2 characters";
     }
 
     // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "Email is required";
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address"
+      newErrors.email = "Please enter a valid email address";
     }
 
     // Phone validation (optional but if provided, should be valid)
     if (formData.phone.trim()) {
-      const phoneRegex = /^[+]?[1-9][\d]{0,15}$/
+      const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
       if (!phoneRegex.test(formData.phone.replace(/[\s\-$$$$]/g, ""))) {
-        newErrors.phone = "Please enter a valid phone number"
+        newErrors.phone = "Please enter a valid phone number";
       }
     }
 
     // Message validation
     if (!formData.message.trim()) {
-      newErrors.message = "Project details are required"
+      newErrors.message = "Project details are required";
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Please provide more details (at least 10 characters)"
+      newErrors.message =
+        "Please provide more details (at least 10 characters)";
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }))
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
-  }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!validateForm()) {
-      return
+      return;
     }
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setIsSubmitting(false);
+    setIsSubmitted(true);
 
     // Reset form after 5 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      setIsSubmitted(false);
       setFormData({
         name: "",
         email: "",
@@ -113,10 +128,10 @@ export default function ModernContactForm() {
         budget: "",
         timeline: "",
         message: "",
-      })
-      setErrors({})
-    }, 5000)
-  }
+      });
+      setErrors({});
+    }, 5000);
+  };
 
   if (isSubmitted) {
     return (
@@ -126,25 +141,30 @@ export default function ModernContactForm() {
         </div>
         <h3 className="text-3xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-purple-200 text-lg mb-6">
-          Your message has been sent successfully. We'll get back to you within 24 hours with a detailed response.
+          Your message has been sent successfully. We'll get back to you within
+          24 hours with a detailed response.
         </p>
         <div className="bg-purple-700/50 rounded-2xl p-6">
           <p className="text-purple-200 text-sm">
             <strong>What's next?</strong>
             <br />
-            Our team will review your requirements and schedule a consultation call to discuss your project in detail.
+            Our team will review your requirements and schedule a consultation
+            call to discuss your project in detail.
           </p>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className="bg-purple-800/30 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-purple-700/50">
       <div className="mb-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Start Your Project</h2>
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          Start Your Project
+        </h2>
         <p className="text-purple-200 text-lg">
-          Tell us about your vision and we'll help bring it to life with our expert development team.
+          Tell us about your vision and we'll help bring it to life with our
+          expert development team.
         </p>
       </div>
 
@@ -152,7 +172,10 @@ export default function ModernContactForm() {
         {/* Name and Email Row */}
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="text-purple-200 mb-3 font-medium flex items-center">
+            <label
+              htmlFor="name"
+              className="text-purple-200 mb-3 font-medium flex items-center"
+            >
               <User className="w-4 h-4 mr-2" />
               Full Name *
             </label>
@@ -176,7 +199,10 @@ export default function ModernContactForm() {
           </div>
 
           <div>
-            <label htmlFor="email" className="text-purple-200 mb-3 font-medium flex items-center">
+            <label
+              htmlFor="email"
+              className="text-purple-200 mb-3 font-medium flex items-center"
+            >
               <Mail className="w-4 h-4 mr-2" />
               Email Address *
             </label>
@@ -203,7 +229,10 @@ export default function ModernContactForm() {
         {/* Company and Phone Row */}
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="text-purple-200 mb-3 font-medium flex items-center">
+            <label
+              htmlFor="company"
+              className="text-purple-200 mb-3 font-medium flex items-center"
+            >
               <Building className="w-4 h-4 mr-2" />
               Company
             </label>
@@ -219,7 +248,10 @@ export default function ModernContactForm() {
           </div>
 
           <div>
-            <label htmlFor="phone" className="text-purple-200 mb-3 font-medium flex items-center">
+            <label
+              htmlFor="phone"
+              className="text-purple-200 mb-3 font-medium flex items-center"
+            >
               <Phone className="w-4 h-4 mr-2" />
               Phone Number
             </label>
@@ -246,7 +278,10 @@ export default function ModernContactForm() {
         {/* Service and Budget Row */}
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="service" className="block text-purple-200 mb-3 font-medium">
+            <label
+              htmlFor="service"
+              className="block text-purple-200 mb-3 font-medium"
+            >
               Service Interested In
             </label>
             <select
@@ -257,7 +292,9 @@ export default function ModernContactForm() {
               className="w-full bg-purple-900/50 border-2 border-purple-600 text-white rounded-xl px-4 py-3 focus:border-purple-400 focus:outline-none transition-all duration-200"
             >
               <option value="">Select a service</option>
-              <option value="custom-software">Custom Software Development</option>
+              <option value="custom-software">
+                Custom Software Development
+              </option>
               <option value="web-development">Web Development</option>
               <option value="mobile-development">Mobile App Development</option>
               <option value="cloud-solutions">Cloud Solutions</option>
@@ -265,12 +302,17 @@ export default function ModernContactForm() {
               <option value="devops">DevOps & CI/CD</option>
               <option value="cybersecurity">Cybersecurity</option>
               <option value="data-analytics">Data Analytics</option>
-              <option value="digital-transformation">Digital Transformation</option>
+              <option value="digital-transformation">
+                Digital Transformation
+              </option>
             </select>
           </div>
 
           <div>
-            <label htmlFor="budget" className="text-purple-200 mb-3 font-medium flex items-center">
+            <label
+              htmlFor="budget"
+              className="text-purple-200 mb-3 font-medium flex items-center"
+            >
               <DollarSign className="w-4 h-4 mr-2" />
               Project Budget
             </label>
@@ -293,7 +335,10 @@ export default function ModernContactForm() {
 
         {/* Timeline */}
         <div>
-          <label htmlFor="timeline" className="block text-purple-200 mb-3 font-medium">
+          <label
+            htmlFor="timeline"
+            className="block text-purple-200 mb-3 font-medium"
+          >
             Project Timeline
           </label>
           <select
@@ -314,7 +359,10 @@ export default function ModernContactForm() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="text-purple-200 mb-3 font-medium flex items-center">
+          <label
+            htmlFor="message"
+            className="text-purple-200 mb-3 font-medium flex items-center"
+          >
             <MessageSquare className="w-4 h-4 mr-2" />
             Project Details *
           </label>
@@ -361,10 +409,11 @@ export default function ModernContactForm() {
           <p className="text-purple-200 text-sm text-center">
             <strong>🔒 Your information is secure</strong>
             <br />
-            We respect your privacy and will never share your details with third parties.
+            We respect your privacy and will never share your details with third
+            parties.
           </p>
         </div>
       </form>
     </div>
-  )
+  );
 }

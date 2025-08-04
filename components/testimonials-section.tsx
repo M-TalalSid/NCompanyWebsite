@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Star, ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -36,7 +36,8 @@ const testimonials = [
     name: "David Thompson",
     company: "CloudTech Solutions",
     role: "Founder",
-    content: "Professional, reliable, and innovative. NexaForge helped us scale our infrastructure seamlessly.",
+    content:
+      "Professional, reliable, and innovative. NexaForge helped us scale our infrastructure seamlessly.",
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
@@ -44,58 +45,63 @@ const testimonials = [
     name: "Sarah Malik",
     company: "EcoNest Interiors",
     role: "Creative Director",
-    content: "NexaForge delivered beyond expectations. Their solutions are both scalable and elegant.",
+    content:
+      "NexaForge delivered beyond expectations. Their solutions are both scalable and elegant.",
     rating: 5,
-    image: "/placeholder.svg?height=80&width=80"
+    image: "/placeholder.svg?height=80&width=80",
   },
   {
     name: "James Carter",
     company: "Finwise Analytics",
     role: "CTO",
-    content: "Efficient and technically sound. Our team productivity has soared since collaborating with NexaForge.",
+    content:
+      "Efficient and technically sound. Our team productivity has soared since collaborating with NexaForge.",
     rating: 4,
-    image: "/placeholder.svg?height=80&width=80"
+    image: "/placeholder.svg?height=80&width=80",
   },
   {
     name: "Aisha Rehman",
     company: "BrightEdTech",
     role: "Founder & CEO",
-    content: "They truly understand startup challenges. NexaForge was a game changer for our product launch.",
+    content:
+      "They truly understand startup challenges. NexaForge was a game changer for our product launch.",
     rating: 5,
-    image: "/placeholder.svg?height=80&width=80"
+    image: "/placeholder.svg?height=80&width=80",
   },
   {
     name: "Liam Nguyen",
     company: "SecureNet Solutions",
     role: "Head of Engineering",
-    content: "Solid performance under pressure. Their cloud migration strategy saved us weeks of work.",
+    content:
+      "Solid performance under pressure. Their cloud migration strategy saved us weeks of work.",
     rating: 4,
-    image: "/placeholder.svg?height=80&width=80"
+    image: "/placeholder.svg?height=80&width=80",
   },
-  
-]
+];
 
-export default function   TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [mounted, setMounted] = useState(false)
+export default function TestimonialsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <section className="">
@@ -116,7 +122,10 @@ export default function   TestimonialsSection() {
           <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-purple-700/50">
             <div className="flex items-center justify-center mb-6">
               {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                <Star
+                  key={i}
+                  className="w-6 h-6 text-yellow-400 fill-current"
+                />
               ))}
             </div>
 
@@ -131,9 +140,12 @@ export default function   TestimonialsSection() {
                 className="w-16 h-16 rounded-full object-cover border-2 border-purple-400"
               />
               <div className="text-center">
-                <div className="text-white font-semibold text-lg">{testimonials[currentIndex].name}</div>
+                <div className="text-white font-semibold text-lg">
+                  {testimonials[currentIndex].name}
+                </div>
                 <div className="text-purple-300">
-                  {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
+                  {testimonials[currentIndex].role},{" "}
+                  {testimonials[currentIndex].company}
                 </div>
               </div>
             </div>
@@ -173,5 +185,5 @@ export default function   TestimonialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

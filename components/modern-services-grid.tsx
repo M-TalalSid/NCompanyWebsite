@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
+import { useState } from "react";
+import Link from "next/link";
 import {
   ArrowRight,
   Code,
@@ -15,15 +15,21 @@ import {
   Zap,
   Star,
   TrendingUp,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
     icon: Code,
     title: "Custom Software Development",
-    description: "Tailored software solutions built to meet your specific business requirements and objectives.",
-    features: ["Custom Applications", "Legacy System Modernization", "API Development", "System Integration"],
+    description:
+      "Tailored software solutions built to meet your specific business requirements and objectives.",
+    features: [
+      "Custom Applications",
+      "Legacy System Modernization",
+      "API Development",
+      "System Integration",
+    ],
     slug: "custom-software-development",
     price: "Starting at $15,000",
     duration: "8-16 weeks",
@@ -34,8 +40,14 @@ const services = [
   {
     icon: Globe,
     title: "Web Development",
-    description: "Modern, responsive websites and web applications that deliver exceptional user experiences.",
-    features: ["Responsive Design", "E-commerce Solutions", "CMS Development", "Progressive Web Apps"],
+    description:
+      "Modern, responsive websites and web applications that deliver exceptional user experiences.",
+    features: [
+      "Responsive Design",
+      "E-commerce Solutions",
+      "CMS Development",
+      "Progressive Web Apps",
+    ],
     slug: "web-development",
     price: "Starting at $8,000",
     duration: "4-12 weeks",
@@ -46,8 +58,14 @@ const services = [
   {
     icon: Smartphone,
     title: "Mobile App Development",
-    description: "Native and cross-platform mobile applications for iOS and Android platforms.",
-    features: ["iOS Development", "Android Development", "Cross-platform Apps", "App Store Optimization"],
+    description:
+      "Native and cross-platform mobile applications for iOS and Android platforms.",
+    features: [
+      "iOS Development",
+      "Android Development",
+      "Cross-platform Apps",
+      "App Store Optimization",
+    ],
     slug: "mobile-app-development",
     price: "Starting at $12,000",
     duration: "6-14 weeks",
@@ -58,8 +76,14 @@ const services = [
   {
     icon: Cloud,
     title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and migration services for modern businesses.",
-    features: ["Cloud Migration", "Infrastructure Setup", "Serverless Architecture", "Cloud Security"],
+    description:
+      "Scalable cloud infrastructure and migration services for modern businesses.",
+    features: [
+      "Cloud Migration",
+      "Infrastructure Setup",
+      "Serverless Architecture",
+      "Cloud Security",
+    ],
     slug: "cloud-solutions",
     price: "Starting at $10,000",
     duration: "6-10 weeks",
@@ -94,8 +118,14 @@ const services = [
   {
     icon: Shield,
     title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and data.",
-    features: ["Security Audits", "Penetration Testing", "Compliance", "Security Training"],
+    description:
+      "Comprehensive security solutions to protect your digital assets and data.",
+    features: [
+      "Security Audits",
+      "Penetration Testing",
+      "Compliance",
+      "Security Training",
+    ],
     slug: "cybersecurity",
     price: "Starting at $9,000",
     duration: "3-8 weeks",
@@ -106,8 +136,14 @@ const services = [
   {
     icon: Database,
     title: "Data Analytics",
-    description: "Transform your data into actionable insights with advanced analytics solutions.",
-    features: ["Data Visualization", "Business Intelligence", "Data Warehousing", "Real-time Analytics"],
+    description:
+      "Transform your data into actionable insights with advanced analytics solutions.",
+    features: [
+      "Data Visualization",
+      "Business Intelligence",
+      "Data Warehousing",
+      "Real-time Analytics",
+    ],
     slug: "data-analytics",
     price: "Starting at $11,000",
     duration: "6-12 weeks",
@@ -127,27 +163,38 @@ const services = [
   //   gradient: "from-pink-500 to-purple-500",
   //   popular: false,
   // },
-]
+];
 
 const complexityColors = {
   Medium: "text-green-400",
   High: "text-yellow-400",
   "Very High": "text-red-400",
-}
+};
 
 export default function ModernServicesGrid() {
-  const [filter, setFilter] = useState("all")
+  const [filter, setFilter] = useState("all");
 
   const filteredServices = services.filter((service) => {
-    if (filter === "all") return true
-    if (filter === "popular") return service.popular
+    if (filter === "all") return true;
+    if (filter === "popular") return service.popular;
     if (filter === "development")
-      return ["custom-software-development", "web-development", "mobile-app-development"].includes(service.slug)
-    if (filter === "infrastructure") return ["cloud-solutions", "devops-cicd", "cybersecurity"].includes(service.slug)
+      return [
+        "custom-software-development",
+        "web-development",
+        "mobile-app-development",
+      ].includes(service.slug);
+    if (filter === "infrastructure")
+      return ["cloud-solutions", "devops-cicd", "cybersecurity"].includes(
+        service.slug
+      );
     if (filter === "advanced")
-      return ["ai-machine-learning", "data-analytics", "digital-transformation"].includes(service.slug)
-    return true
-  })
+      return [
+        "ai-machine-learning",
+        "data-analytics",
+        "digital-transformation",
+      ].includes(service.slug);
+    return true;
+  });
 
   return (
     <section className="py-20">
@@ -206,8 +253,12 @@ export default function ModernServicesGrid() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
-                    <div className="text-purple-300 text-sm">{service.duration}</div>
+                    <div className="text-2xl font-bold text-white">
+                      {service.price}
+                    </div>
+                    <div className="text-purple-300 text-sm">
+                      {service.duration}
+                    </div>
                   </div>
                 </div>
 
@@ -215,7 +266,9 @@ export default function ModernServicesGrid() {
                   {service.title}
                 </h3>
 
-                <p className="text-purple-200 mb-6 leading-relaxed">{service.description}</p>
+                <p className="text-purple-200 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
 
                 {/* Features */}
                 <div className="mb-6">
@@ -224,12 +277,17 @@ export default function ModernServicesGrid() {
                     Key Features
                   </h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-purple-300 text-sm flex items-center">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
+                    {service.features
+                      .slice(0, 3)
+                      .map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className="text-purple-300 text-sm flex items-center"
+                        >
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 flex-shrink-0"></div>
+                          {feature}
+                        </li>
+                      ))}
                   </ul>
                 </div>
 
@@ -238,7 +296,11 @@ export default function ModernServicesGrid() {
                   <div className="flex items-center space-x-2">
                     <span className="text-purple-300 text-sm">Complexity:</span>
                     <span
-                      className={`text-sm font-semibold ${complexityColors[service.complexity as keyof typeof complexityColors]}`}
+                      className={`text-sm font-semibold ${
+                        complexityColors[
+                          service.complexity as keyof typeof complexityColors
+                        ]
+                      }`}
                     >
                       {service.complexity}
                     </span>
@@ -262,10 +324,12 @@ export default function ModernServicesGrid() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-purple-800/30 backdrop-blur-sm rounded-3xl p-12 border border-purple-700/50">
-            <h2 className="text-3xl font-bold text-white mb-6">Need a Custom Solution?</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Need a Custom Solution?
+            </h2>
             <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-              Every business is unique. Let's discuss how we can create a tailored solution that perfectly fits your
-              needs and budget.
+              Every business is unique. Let's discuss how we can create a
+              tailored solution that perfectly fits your needs and budget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -289,5 +353,5 @@ export default function ModernServicesGrid() {
         </div>
       </div>
     </section>
-  )
+  );
 }

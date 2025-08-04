@@ -1,5 +1,13 @@
-import Link from "next/link"
-import { Twitter, Linkedin, Instagram, Facebook, MapPin, Mail, Phone } from "lucide-react"
+import Link from "next/link";
+import {
+  Twitter,
+  Linkedin,
+  Instagram,
+  Facebook,
+  MapPin,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 export default function Footer() {
   const services = [
@@ -7,9 +15,9 @@ export default function Footer() {
     "Web Development",
     "Mobile Development",
     "Cloud Solutions",
-  ]
+  ];
 
-  const company = ["About", "Contact", "Blog", "Privacy Policy"]
+  const company = ["About", "Contact", "Blog", "Privacy Policy"];
 
   return (
     <footer className="bg-purple-900/50 backdrop-blur-sm border-t border-purple-700/50">
@@ -21,10 +29,13 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center font-bold text-white text-xl">
                 MT
               </div>
-              <span className="text-2xl font-bold text-white">International</span>
+              <span className="text-2xl font-bold text-white">
+                International
+              </span>
             </Link>
             <p className="text-purple-200 leading-relaxed">
-              Transforming businesses through innovative software solutions and cutting-edge technology.
+              Transforming businesses through innovative software solutions and
+              cutting-edge technology.
             </p>
             <div className="flex space-x-4">
               <Link
@@ -64,7 +75,10 @@ export default function Footer() {
               {services.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={`/services/${service.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "")}`}
+                    href={`/services/${service
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")
+                      .replace(/&/g, "")}`}
                     className="text-purple-200 hover:text-white transition-colors duration-200"
                   >
                     {service}
@@ -93,7 +107,9 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6">Contact Info</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">
+              Contact Info
+            </h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-purple-400" />
@@ -101,7 +117,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-purple-200">mtinternational139@gmail.com</span>
+                <span className="text-purple-200">
+                  mtinternational139@gmail.com
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-purple-400" />
@@ -114,15 +132,26 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-purple-700/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-purple-300">© 2025 MT International. All Rights Reserved.</p>
+            <p className="text-purple-300">
+              © 2025 MT International. All Rights Reserved.
+            </p>
             <div className="flex space-x-6">
-              <Link href="/terms" className="text-purple-300 hover:text-white transition-colors duration-200">
+              <Link
+                href="/terms"
+                className="text-purple-300 hover:text-white transition-colors duration-200"
+              >
                 Terms of Service
               </Link>
-              <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors duration-200">
+              <Link
+                href="/privacy"
+                className="text-purple-300 hover:text-white transition-colors duration-200"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/cookies" className="text-purple-300 hover:text-white transition-colors duration-200">
+              <Link
+                href="/cookies"
+                className="text-purple-300 hover:text-white transition-colors duration-200"
+              >
                 Cookie Policy
               </Link>
             </div>
@@ -130,5 +159,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

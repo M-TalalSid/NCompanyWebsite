@@ -1,16 +1,26 @@
-import { Button } from "@/components/ui/button"
-import { Check, ArrowRight, Star, Clock, Users, Zap, Shield, Link2, ArrowLeft } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import {
+  Check,
+  ArrowRight,
+  Star,
+  Clock,
+  Users,
+  Zap,
+  Shield,
+  Link2,
+  ArrowLeft,
+} from "lucide-react";
+import Link from "next/link";
 
 interface ServiceDetailProps {
   service: {
-    title: string
-    description: string
-    longDescription: string
-    features: string[]
-    benefits: string[]
-    process: string[]
-  }
+    title: string;
+    description: string;
+    longDescription: string;
+    features: string[];
+    benefits: string[];
+    process: string[];
+  };
 }
 
 // Add pricing data for each service
@@ -166,10 +176,12 @@ const servicePricing = {
       },
     ],
   },
-}
+};
 
 export default function ServiceDetail({ service }: ServiceDetailProps) {
-  const pricing = servicePricing[service.title as keyof typeof servicePricing] || servicePricing.default
+  const pricing =
+    servicePricing[service.title as keyof typeof servicePricing] ||
+    servicePricing.default;
 
   return (
     <div className="container mx-auto px-4 ">
@@ -178,34 +190,41 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         href="/services"
         className="inline-flex items-center  text-purple-400 hover:text-purple-300 transition-colors duration-200 mb-8"
       >
-        <ArrowLeft className="w-4 h-4 mr-2 "  />
+        <ArrowLeft className="w-4 h-4 mr-2 " />
         Back to Service
       </Link>
       {/* Hero Section */}
       <div className="text-center mb-16">
-        <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">{service.title}</h1>
-        <p className="text-xl text-purple-200 max-w-3xl mx-auto mb-8">{service.description}</p>
-        
+        <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          {service.title}
+        </h1>
+        <p className="text-xl text-purple-200 max-w-3xl mx-auto mb-8">
+          {service.description}
+        </p>
+
         <Link href="/contact">
           <Button
-          size="lg"
-          className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105"
-        >
-          Get Started
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+            size="lg"
+            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105"
+          >
+            Get Started
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </Link>
-    
       </div>
 
       {/* Overview */}
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div>
           <h2 className="text-3xl font-bold text-white mb-6">Overview</h2>
-          <p className="text-purple-200 text-lg leading-relaxed">{service.longDescription}</p>
+          <p className="text-purple-200 text-lg leading-relaxed">
+            {service.longDescription}
+          </p>
         </div>
         <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50">
-          <h3 className="text-xl font-semibold text-white mb-6">Key Benefits</h3>
+          <h3 className="text-xl font-semibold text-white mb-6">
+            Key Benefits
+          </h3>
           <ul className="space-y-3">
             {service.benefits.map((benefit, index) => (
               <li key={index} className="flex items-center text-purple-200">
@@ -222,10 +241,13 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-6">
             Choose Your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Package</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Package
+            </span>
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Flexible pricing options designed to meet your specific needs and budget
+            Flexible pricing options designed to meet your specific needs and
+            budget
           </p>
         </div>
 
@@ -249,7 +271,9 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {pkg.name}
+                </h3>
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2">
                   {pkg.price}
                 </div>
@@ -262,7 +286,10 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
               <ul className="space-y-3 mb-8">
                 {pkg.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start text-purple-200">
+                  <li
+                    key={featureIndex}
+                    className="flex items-start text-purple-200"
+                  >
                     <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
                     {feature}
                   </li>
@@ -276,7 +303,9 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                     : "bg-purple-700 hover:bg-purple-600 text-white"
                 }`}
               >
-                {pkg.price === "Custom Quote" || pkg.price === "Contact Us" ? "Get Quote" : "Choose Plan"}
+                {pkg.price === "Custom Quote" || pkg.price === "Contact Us"
+                  ? "Get Quote"
+                  : "Choose Plan"}
               </Button>
             </div>
           ))}
@@ -287,18 +316,30 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Dedicated Team</h3>
-              <p className="text-purple-200">Experienced developers assigned to your project</p>
+              <h3 className="text-xl font-bold text-white mb-2">
+                Dedicated Team
+              </h3>
+              <p className="text-purple-200">
+                Experienced developers assigned to your project
+              </p>
             </div>
             <div>
               <Zap className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Fast Delivery</h3>
-              <p className="text-purple-200">Agile development with regular updates</p>
+              <h3 className="text-xl font-bold text-white mb-2">
+                Fast Delivery
+              </h3>
+              <p className="text-purple-200">
+                Agile development with regular updates
+              </p>
             </div>
             <div>
               <Shield className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Quality Guarantee</h3>
-              <p className="text-purple-200">100% satisfaction guarantee with ongoing support</p>
+              <h3 className="text-xl font-bold text-white mb-2">
+                Quality Guarantee
+              </h3>
+              <p className="text-purple-200">
+                100% satisfaction guarantee with ongoing support
+              </p>
             </div>
           </div>
         </div>
@@ -306,7 +347,9 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
       {/* Features */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">What's Included</h2>
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          What's Included
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {service.features.map((feature, index) => (
             <div
@@ -324,7 +367,9 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
       {/* Process */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Process</h2>
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          Our Process
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {service.process.map((step, index) => (
             <div
@@ -342,9 +387,12 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
       {/* CTA */}
       <div className="text-center bg-purple-800/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-700/50">
-        <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+        <h2 className="text-3xl font-bold text-white mb-6">
+          Ready to Get Started?
+        </h2>
         <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-          Let's discuss how our {service.title.toLowerCase()} services can help transform your business.
+          Let's discuss how our {service.title.toLowerCase()} services can help
+          transform your business.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* <Link href="/contact">
@@ -368,5 +416,5 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

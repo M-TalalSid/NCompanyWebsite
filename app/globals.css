@@ -410,3 +410,18 @@ html {
     transition: none !important;
   }
 }
+
+@layer utilities {
+  .animate-border-glow {
+    animation: borderPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes borderPulse {
+    0%, 100% {
+      box-shadow: 0 0 0px #9333ea;
+    }
+    50% {
+      box-shadow: 0 0 12px 4px #9333ea;
+    }
+  }
+}

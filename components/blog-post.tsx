@@ -1,19 +1,19 @@
-import type React from "react"
-import Link from "next/link"
-import { Calendar, User, Clock, ArrowLeft, Share2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import type React from "react";
+import Link from "next/link";
+import { Calendar, User, Clock, ArrowLeft, Share2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface BlogPostProps {
   post: {
-    title: string
-    excerpt: string
-    author: string
-    date: string
-    readTime: string
-    category: string
-    image: string
-    content: string
-  }
+    title: string;
+    excerpt: string;
+    author: string;
+    date: string;
+    readTime: string;
+    category: string;
+    image: string;
+    content: string;
+  };
 }
 
 export default function BlogPost({ post }: BlogPostProps) {
@@ -36,9 +36,13 @@ export default function BlogPost({ post }: BlogPostProps) {
           </span>
         </div>
 
-        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">{post.title}</h1>
+        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+          {post.title}
+        </h1>
 
-        <p className="text-xl text-purple-200 mb-8 leading-relaxed">{post.excerpt}</p>
+        <p className="text-xl text-purple-200 mb-8 leading-relaxed">
+          {post.excerpt}
+        </p>
 
         <div className="flex flex-wrap items-center gap-6 text-purple-300 mb-8">
           <div className="flex items-center space-x-2">
@@ -112,11 +116,14 @@ export default function BlogPost({ post }: BlogPostProps) {
             className="w-16 h-16 rounded-full object-cover"
           />
           <div>
-            <h3 className="text-xl font-bold text-white mb-2">About {post.author}</h3>
+            <h3 className="text-xl font-bold text-white mb-2">
+              About {post.author}
+            </h3>
             <p className="text-purple-200">
-              {post.author} is a senior software engineer at NexaForge with expertise in {post.category.toLowerCase()}.
-              With years of experience in the field, they regularly share insights and best practices with the
-              development community.
+              {post.author} is a senior software engineer at NexaForge with
+              expertise in {post.category.toLowerCase()}. With years of
+              experience in the field, they regularly share insights and best
+              practices with the development community.
             </p>
           </div>
         </div>
@@ -124,8 +131,12 @@ export default function BlogPost({ post }: BlogPostProps) {
 
       {/* Related Posts CTA */}
       <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-white mb-4">Want to Read More?</h3>
-        <p className="text-purple-200 mb-6">Explore more insights and tutorials from our team of experts</p>
+        <h3 className="text-2xl font-bold text-white mb-4">
+          Want to Read More?
+        </h3>
+        <p className="text-purple-200 mb-6">
+          Explore more insights and tutorials from our team of experts
+        </p>
         <Link href="/blog">
           <Button
             size="lg"
@@ -136,5 +147,5 @@ export default function BlogPost({ post }: BlogPostProps) {
         </Link>
       </div>
     </article>
-  )
+  );
 }

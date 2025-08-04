@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Building, Users, Globe, Award } from "lucide-react"
+import { useEffect, useState } from "react";
+import { Building, Users, Globe, Award } from "lucide-react";
 
 const stats = [
   {
@@ -28,14 +28,14 @@ const stats = [
     label: "Client Satisfaction",
     description: "Consistently high client satisfaction ratings",
   },
-]
+];
 
 export default function CompanyStats() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <section className="py-20">
@@ -43,7 +43,9 @@ export default function CompanyStats() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Impact</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Impact
+            </span>
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
             Numbers that reflect our commitment to excellence and client success
@@ -64,13 +66,17 @@ export default function CompanyStats() {
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-xl font-semibold text-purple-200 mb-3">{stat.label}</div>
+              <div className="text-4xl font-bold text-white mb-2">
+                {stat.number}
+              </div>
+              <div className="text-xl font-semibold text-purple-200 mb-3">
+                {stat.label}
+              </div>
               <div className="text-purple-300 text-sm">{stat.description}</div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

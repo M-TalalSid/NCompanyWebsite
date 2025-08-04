@@ -1,13 +1,14 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ServiceDetail from "@/components/service-detail"
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ServiceDetail from "@/components/service-detail";
 
 const services = {
   "custom-software-development": {
     title: "Custom Software Development",
-    description: "Transform your unique business requirements into powerful, scalable software solutions.",
+    description:
+      "Transform your unique business requirements into powerful, scalable software solutions.",
     longDescription:
       "Our custom software development services are designed to address your specific business challenges and opportunities. We work closely with you to understand your requirements, design the perfect solution, and deliver software that drives your business forward.",
     features: [
@@ -38,7 +39,8 @@ const services = {
   },
   "web-development": {
     title: "Web Development",
-    description: "Create stunning, responsive websites and web applications that engage your audience.",
+    description:
+      "Create stunning, responsive websites and web applications that engage your audience.",
     longDescription:
       "Our web development services combine cutting-edge technology with creative design to deliver exceptional digital experiences. From simple websites to complex web applications, we build solutions that perform beautifully across all devices.",
     features: [
@@ -69,7 +71,8 @@ const services = {
   },
   "mobile-app-development": {
     title: "Mobile App Development",
-    description: "Build powerful mobile applications that connect with your users on their favorite devices.",
+    description:
+      "Build powerful mobile applications that connect with your users on their favorite devices.",
     longDescription:
       "Our mobile app development expertise spans native iOS and Android development as well as cross-platform solutions. We create apps that not only look great but also provide seamless user experiences and robust functionality.",
     features: [
@@ -100,7 +103,8 @@ const services = {
   },
   "cloud-solutions": {
     title: "Cloud Solutions",
-    description: "Leverage the power of cloud computing to scale your business and reduce costs.",
+    description:
+      "Leverage the power of cloud computing to scale your business and reduce costs.",
     longDescription:
       "Our cloud solutions help businesses modernize their infrastructure, improve scalability, and reduce operational costs. We provide comprehensive cloud services from migration to ongoing management.",
     features: [
@@ -131,7 +135,8 @@ const services = {
   },
   "ai-machine-learning": {
     title: "AI & Machine Learning",
-    description: "Harness the power of artificial intelligence to automate processes and gain insights.",
+    description:
+      "Harness the power of artificial intelligence to automate processes and gain insights.",
     longDescription:
       "Our AI and machine learning services help businesses leverage data to make better decisions, automate processes, and create intelligent applications that adapt and learn over time.",
     features: [
@@ -162,7 +167,8 @@ const services = {
   },
   "devops-cicd": {
     title: "DevOps & CI/CD",
-    description: "Streamline your development process with automated workflows and continuous delivery.",
+    description:
+      "Streamline your development process with automated workflows and continuous delivery.",
     longDescription:
       "Our DevOps services help organizations improve collaboration between development and operations teams, automate processes, and deliver software faster and more reliably.",
     features: [
@@ -193,7 +199,8 @@ const services = {
   },
   cybersecurity: {
     title: "Cybersecurity",
-    description: "Protect your business from cyber threats with comprehensive security solutions.",
+    description:
+      "Protect your business from cyber threats with comprehensive security solutions.",
     longDescription:
       "Our cybersecurity services provide comprehensive protection for your digital assets, ensuring your business stays secure against evolving threats while maintaining compliance with industry standards.",
     features: [
@@ -224,7 +231,8 @@ const services = {
   },
   "data-analytics": {
     title: "Data Analytics",
-    description: "Transform your data into actionable insights that drive business growth.",
+    description:
+      "Transform your data into actionable insights that drive business growth.",
     longDescription:
       "Our data analytics services help organizations unlock the value of their data through advanced analytics, visualization, and business intelligence solutions that enable data-driven decision making.",
     features: [
@@ -255,7 +263,8 @@ const services = {
   },
   "digital-transformation": {
     title: "Digital Transformation",
-    description: "Modernize your business processes and embrace digital technologies for growth.",
+    description:
+      "Modernize your business processes and embrace digital technologies for growth.",
     longDescription:
       "Our digital transformation services help organizations modernize their operations, improve customer experiences, and create new business models through strategic technology adoption.",
     features: [
@@ -284,35 +293,35 @@ const services = {
       "Continuous Improvement",
     ],
   },
-}
+};
 
 interface Props {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const service = services[slug as keyof typeof services]
+  const { slug } = await params;
+  const service = services[slug as keyof typeof services];
 
   if (!service) {
     return {
       title: "Service Not Found - NexaForge",
-    }
+    };
   }
 
   return {
     title: `${service.title} - NexaForge`,
     description: service.description,
     keywords: `${service.title.toLowerCase()}, software development, technology solutions`,
-  }
+  };
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { slug } = await params
-  const service = services[slug as keyof typeof services]
+  const { slug } = await params;
+  const service = services[slug as keyof typeof services];
 
   if (!service) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -323,11 +332,11 @@ export default async function ServicePage({ params }: Props) {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
 export async function generateStaticParams() {
   return Object.keys(services).map((slug) => ({
     slug,
-  }))
+  }));
 }

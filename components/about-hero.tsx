@@ -15,35 +15,40 @@ export default function AboutHero() {
             </span>
           </h1>
           <p className="text-xl text-purple-200 leading-relaxed mb-12">
-            We are a passionate team of software developers, designers, and innovators dedicated to transforming
-            businesses through cutting-edge technology solutions. Since our founding, we've been committed to delivering
-            exceptional software that drives growth and success for our clients.
+            We are a passionate team of software developers, designers, and
+            innovators dedicated to transforming businesses through cutting-edge
+            technology solutions. Since our founding, we've been committed to
+            delivering exceptional software that drives growth and success for
+            our clients.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50">
-              <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Our Mission
+              </h3>
               <p className="text-purple-200">
-                To empower businesses with innovative software solutions that drive digital transformation and
-                sustainable growth.
+                To empower businesses with innovative software solutions that
+                drive digital transformation and sustainable growth.
               </p>
             </div>
             <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50">
               <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
               <p className="text-purple-200">
-                To be the leading software development partner, known for excellence, innovation, and transformative
-                solutions.
+                To be the leading software development partner, known for
+                excellence, innovation, and transformative solutions.
               </p>
             </div>
             <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50">
               <h3 className="text-2xl font-bold text-white mb-4">Our Values</h3>
               <p className="text-purple-200">
-                Innovation, quality, collaboration, and client success are at the core of everything we do.
+                Innovation, quality, collaboration, and client success are at
+                the core of everything we do.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

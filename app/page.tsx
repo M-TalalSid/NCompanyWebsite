@@ -1,22 +1,24 @@
-import type { Metadata } from "next"
-import Header from "@/components/header"
-import HeroSection from "@/components/hero-section"
-import StatsSection from "@/components/stats-section"
-import ServicesPreview from "@/components/services-preview"
-import TestimonialsSection from "@/components/testimonials-section"
-import Footer from "@/components/footer"
+import type { Metadata } from "next";
+import Header from "@/components/header";
+import HeroSection from "@/components/hero-section";
+import StatsSection from "@/components/stats-section";
+import ServicesPreview from "@/components/services-preview";
+import TestimonialsSection from "@/components/testimonials-section";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "NexaForge - Premium Software Solutions | Custom Development",
+  title: "MT International - Premium Software Solutions | Development & Innovation",
   description:
     "Transform your business with cutting-edge custom software development, web applications, and digital solutions crafted by expert developers.",
-  keywords: "software development, web development, mobile apps, custom software, digital solutions",
+  keywords:
+    "software development, web development, mobile apps, custom software, digital solutions",
   openGraph: {
-    title: "NexaForge - Premium Software Solutions",
-    description: "Transform your business with cutting-edge custom software development",
+    title: "MT International - Premium Software Solutions",
+    description:
+      "Transform your business with cutting-edge custom software development",
     type: "website",
   },
-}
+};
 
 export default function HomePage() {
   return (
@@ -30,5 +32,5 @@ export default function HomePage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

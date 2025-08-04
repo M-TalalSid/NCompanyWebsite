@@ -1,24 +1,35 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Code, Smartphone, Cloud, Brain, Settings, Shield } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  Code,
+  Smartphone,
+  Cloud,
+  Brain,
+  Settings,
+  Shield,
+} from "lucide-react";
 
 const services = [
   {
     icon: Code,
     title: "Custom Software Development",
-    description: "Tailored software solutions built to meet your specific business requirements.",
+    description:
+      "Tailored software solutions built to meet your specific business requirements.",
     slug: "custom-software-development",
   },
   {
     icon: Smartphone,
     title: "Mobile App Development",
-    description: "Native and cross-platform mobile applications for iOS and Android.",
+    description:
+      "Native and cross-platform mobile applications for iOS and Android.",
     slug: "mobile-app-development",
   },
   {
     icon: Cloud,
     title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and migration services for modern businesses.",
+    description:
+      "Scalable cloud infrastructure and migration services for modern businesses.",
     slug: "cloud-solutions",
   },
   // {
@@ -36,10 +47,11 @@ const services = [
   {
     icon: Shield,
     title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets.",
+    description:
+      "Comprehensive security solutions to protect your digital assets.",
     slug: "cybersecurity",
   },
-]
+];
 
 export default function ServicesPreview() {
   return (
@@ -48,10 +60,13 @@ export default function ServicesPreview() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Services</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Services
+            </span>
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            We offer comprehensive software development services to transform your ideas into reality
+            We offer comprehensive software development services to transform
+            your ideas into reality
           </p>
         </div>
 
@@ -92,5 +107,5 @@ export default function ServicesPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }

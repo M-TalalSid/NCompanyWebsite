@@ -1,25 +1,29 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
-export default function PageTransitions({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  const [displayChildren, setDisplayChildren] = useState(children)
+export default function PageTransitions({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const pathname = usePathname();
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayChildren, setDisplayChildren] = useState(children);
 
   useEffect(() => {
     if (children !== displayChildren) {
-      setIsTransitioning(true)
+      setIsTransitioning(true);
       const timer = setTimeout(() => {
-        setDisplayChildren(children)
-        setIsTransitioning(false)
-      }, 300)
-      return () => clearTimeout(timer)
+        setDisplayChildren(children);
+        setIsTransitioning(false);
+      }, 300);
+      return () => clearTimeout(timer);
     }
-  }, [children, displayChildren])
+  }, [children, displayChildren]);
 
   return (
     <div className="relative">
@@ -39,10 +43,12 @@ export default function PageTransitions({ children }: { children: React.ReactNod
 
       {/* Page content */}
       <div
-        className={`transition-all duration-400 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
+        className={`transition-all duration-400 ${
+          isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
+        }`}
       >
         {displayChildren}
       </div>
     </div>
-  )
+  );
 }

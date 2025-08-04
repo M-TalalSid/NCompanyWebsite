@@ -1,16 +1,17 @@
-import type { Metadata } from "next"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ModernContactForm from "@/components/modern-contact-form"
-import ContactInfo from "@/components/contact-info"
-import ContactHero from "@/components/contact-hero"
+import type { Metadata } from "next";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ModernContactForm from "@/components/modern-contact-form";
+import ContactInfo from "@/components/contact-info";
+import ContactHero from "@/components/contact-hero";
 
 export const metadata: Metadata = {
   title: "Contact Us - NexaForge | Get In Touch",
   description:
     "Contact NexaForge for your software development needs. Get a free consultation and quote for your project.",
-  keywords: "contact nexaforge, software development consultation, get quote, contact form",
-}
+  keywords:
+    "contact nexaforge, software development consultation, get quote, contact form",
+};
 
 export default function ContactPage() {
   return (
@@ -27,5 +28,5 @@ export default function ContactPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

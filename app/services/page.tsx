@@ -1,16 +1,17 @@
-import type { Metadata } from "next"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ModernServicesGrid from "@/components/modern-services-grid"
-import ServicesHero from "@/components/services-hero"
-import ScrollAnimation from "@/components/scroll-animations"
+import type { Metadata } from "next";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ModernServicesGrid from "@/components/modern-services-grid";
+import ServicesHero from "@/components/services-hero";
+import ScrollAnimation from "@/components/scroll-animations";
 
 export const metadata: Metadata = {
   title: "Our Services - NexaForge | Software Development Solutions",
   description:
     "Explore our comprehensive range of software development services including custom development, mobile apps, cloud solutions, and more.",
-  keywords: "software services, custom development, mobile apps, web development, cloud solutions",
-}
+  keywords:
+    "software services, custom development, mobile apps, web development, cloud solutions",
+};
 
 export default function ServicesPage() {
   return (
@@ -26,5 +27,5 @@ export default function ServicesPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
