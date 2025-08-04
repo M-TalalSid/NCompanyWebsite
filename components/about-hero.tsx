@@ -11,7 +11,7 @@ export default function AboutHero() {
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8">
             About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              NexaForge
+              MT International
             </span>
           </h1>
           <p className="text-xl text-purple-200 leading-relaxed mb-12">

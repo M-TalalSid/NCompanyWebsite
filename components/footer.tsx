@@ -114,7 +114,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-purple-700/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-purple-300">© 2025 NexaForge. All Rights Reserved.</p>
+            <p className="text-purple-300">© 2025 MT International. All Rights Reserved.</p>
             <div className="flex space-x-6">
               <Link href="/terms" className="text-purple-300 hover:text-white transition-colors duration-200">
                 Terms of Service

@@ -41,7 +41,7 @@ export default function ContactInfo() {
             <div>
               <h4 className="text-white font-semibold mb-1">Call Us</h4>
               <p className="text-purple-200">+92 (301) 021-9324</p>
-              <p className="text-purple-200">+92 (341) 245-7850</p>
+              <p className="text-purple-200">+92 (334) 990-6990</p>
             </div>
           </div>
 

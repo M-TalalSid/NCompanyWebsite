@@ -70,7 +70,7 @@ function FloatingCircles() {
       {/* Center Stats */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-5xl font-bold text-white mb-2">500+</div>
+          <div className="text-5xl font-bold text-white mb-2">50+</div>
           <div className="text-purple-200">Projects</div>
           <div className="text-purple-300 text-sm">Expert Team</div>
         </div>
@@ -80,7 +80,7 @@ function FloatingCircles() {
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-0.5 animate-float">
         <div className="w-full h-full rounded-full bg-purple-900 flex items-center justify-center">
           <img
-            src="/placeholder.svg?height=60&width=60"
+            src="animatedpic1.webp"
             alt="Team member"
             className="w-12 h-12 rounded-full object-cover"
           />
@@ -90,7 +90,7 @@ function FloatingCircles() {
       <div className="absolute bottom-8 left-8 w-14 h-14 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 p-0.5 animate-float-delayed">
         <div className="w-full h-full rounded-full bg-purple-900 flex items-center justify-center">
           <img
-            src="/placeholder.svg?height=52&width=52"
+            src="animatedpic2.webp"
             alt="Team member"
             className="w-10 h-10 rounded-full object-cover"
           />
@@ -100,7 +100,7 @@ function FloatingCircles() {
       <div className="absolute bottom-8 right-8 w-14 h-14 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 p-0.5 animate-float-slow">
         <div className="w-full h-full rounded-full bg-purple-900 flex items-center justify-center">
           <img
-            src="/placeholder.svg?height=52&width=52"
+            src="animatedpic3.webp"
             alt="Team member"
             className="w-10 h-10 rounded-full object-cover"
           />
@@ -110,7 +110,7 @@ function FloatingCircles() {
       <div className="absolute top-1/2 right-4 w-12 h-12 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 p-0.5 animate-float-reverse">
         <div className="w-full h-full rounded-full bg-purple-900 flex items-center justify-center">
           <img
-            src="/placeholder.svg?height=44&width=44"
+            src="animatedpic4.webp"
             alt="Team member"
             className="w-8 h-8 rounded-full object-cover"
           />
