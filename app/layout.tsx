@@ -2,7 +2,6 @@ import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import PageTransitions from "@/components/page-transitions";
 
@@ -68,7 +67,7 @@ export default function RootLayout({
     ],
     "serviceType": [
       "Custom Software Development",
-      "Web Development", 
+      "Web Development",
       "Mobile App Development",
       "Cloud Solutions",
       "Cybersecurity"
@@ -76,23 +75,16 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={`${inter.className} bg-background text-foreground`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <PageTransitions>{children}</PageTransitions>
-          <Toaster />
-        </ThemeProvider>
+      <body className={`${inter.className} bg-background text-foreground`} suppressHydrationWarning>
+        <PageTransitions>{children}</PageTransitions>
+        <Toaster />
       </body>
     </html>
   );
