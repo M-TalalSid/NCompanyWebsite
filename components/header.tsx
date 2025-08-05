@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +35,23 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group" aria-label="MT International Homepage">
-            <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center font-bold text-white text-xl group-hover:scale-110 transition-transform duration-200">
-              MT
+            {/* Eagle Logo */}
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex-shrink-0">
+              <Image
+                src="/MT Internatioonal.png"
+                alt="MT International Eagle Logo"
+                width={96}
+                height={96}
+                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-200"
+                priority
+              />
             </div>
-            <span className="text-2xl font-bold text-white">INTERNATIONAL</span>
+            
+            {/* Company Name */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2">
+              <span className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">MT</span>
+              <span className="text-sm sm:text-base lg:text-lg font-semibold text-purple-200 leading-tight">INTERNATIONAL</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
