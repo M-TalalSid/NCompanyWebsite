@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,6 +17,7 @@ import {
   MessageSquare,
   DollarSign,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 interface FormData {
   name: string;
@@ -48,6 +49,12 @@ export default function ModernContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string>("");
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "");
+  }, []);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -109,28 +116,49 @@ export default function ModernContactForm() {
     }
 
     setIsSubmitting(true);
+    setSubmitError("");
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        service: formData.service,
+        budget: formData.budget,
+        timeline: formData.timeline,
+        message: formData.message,
+        to_name: "MT International Team",
+      };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
+      );
 
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        service: "",
-        budget: "",
-        timeline: "",
-        message: "",
-      });
-      setErrors({});
-    }, 5000);
+      if (result.status === 200) {
+        setIsSubmitted(true);
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          budget: "",
+          timeline: "",
+          message: "",
+        });
+        setErrors({});
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setSubmitError("Failed to send message. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -167,6 +195,15 @@ export default function ModernContactForm() {
           expert development team.
         </p>
       </div>
+
+      {submitError && (
+        <div className="bg-red-500/20 border border-red-400/50 rounded-xl p-4 mb-6">
+          <div className="flex items-center text-red-400">
+            <AlertCircle className="w-5 h-5 mr-2" />
+            <span>{submitError}</span>
+          </div>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name and Email Row */}

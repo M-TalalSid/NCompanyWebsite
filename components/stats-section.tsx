@@ -47,7 +47,7 @@ export default function StatsSection() {
               className={`bg-purple-800/30 backdrop-blur-sm rounded-2xl p-8 text-center border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 ${
                 mounted ? "animate-fade-in-up" : "opacity-0"
               }`}
-              style={{ animationDelay: `${index * 200}ms` }}
+                             style={{ animationDelay: `${index * 100}ms` }}
             >
               <div
                 className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${stat.color} p-0.5`}

@@ -10,7 +10,7 @@ const testimonials = [
     company: "TechStart Inc.",
     role: "CEO",
     content:
-      "NexaForge transformed our vision into a powerful software solution. Their expertise and dedication exceeded our expectations.",
+      "MT International transformed our vision into a powerful software solution. Their expertise and dedication exceeded our expectations.",
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
@@ -37,7 +37,7 @@ const testimonials = [
     company: "CloudTech Solutions",
     role: "Founder",
     content:
-      "Professional, reliable, and innovative. NexaForge helped us scale our infrastructure seamlessly.",
+      "Professional, reliable, and innovative. MT International helped us scale our infrastructure seamlessly.",
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
@@ -46,7 +46,7 @@ const testimonials = [
     company: "EcoNest Interiors",
     role: "Creative Director",
     content:
-      "NexaForge delivered beyond expectations. Their solutions are both scalable and elegant.",
+      "MT International delivered beyond expectations. Their solutions are both scalable and elegant.",
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
@@ -55,7 +55,7 @@ const testimonials = [
     company: "Finwise Analytics",
     role: "CTO",
     content:
-      "Efficient and technically sound. Our team productivity has soared since collaborating with NexaForge.",
+      "Efficient and technically sound. Our team productivity has soared since collaborating with MT International.",
     rating: 4,
     image: "/placeholder.svg?height=80&width=80",
   },
@@ -64,7 +64,7 @@ const testimonials = [
     company: "BrightEdTech",
     role: "Founder & CEO",
     content:
-      "They truly understand startup challenges. NexaForge was a game changer for our product launch.",
+      "They truly understand startup challenges. MT International was a game changer for our product launch.",
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
@@ -87,7 +87,7 @@ export default function TestimonialsSection() {
     setMounted(true);
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -101,7 +101,8 @@ export default function TestimonialsSection() {
     );
   };
 
-  if (!mounted) return null;
+  // Remove mounted check for immediate loading
+  // if (!mounted) return null;
 
   return (
     <section className="">

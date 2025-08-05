@@ -32,36 +32,36 @@ export default function ServicesHero() {
             </div>
           </div>
 
-          <h1
-            className={`text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight ${
-              mounted ? "animate-fade-in-up" : "opacity-0"
-            }`}
-            style={{ animationDelay: "200ms" }}
-          >
+                     <h1
+             className={`text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight ${
+               mounted ? "animate-fade-in-up" : "opacity-0"
+             }`}
+             style={{ animationDelay: "200ms" }}
+           >
             Transform Your Business with{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 animate-gradient-x">
               Cutting-Edge Services
             </span>
           </h1>
 
-          <p
-            className={`text-xl lg:text-2xl text-purple-200 mb-12 leading-relaxed ${
-              mounted ? "animate-fade-in-up" : "opacity-0"
-            }`}
-            style={{ animationDelay: "400ms" }}
-          >
+                     <p
+             className={`text-xl lg:text-2xl text-purple-200 mb-12 leading-relaxed ${
+               mounted ? "animate-fade-in-up" : "opacity-0"
+             }`}
+             style={{ animationDelay: "400ms" }}
+           >
             From custom software development to AI-powered solutions, we deliver
             comprehensive services that drive innovation and growth for
             businesses of all sizes.
           </p>
 
           {/* Service Categories Preview */}
-          <div
-            className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 ${
-              mounted ? "animate-fade-in-up" : "opacity-0"
-            }`}
-            style={{ animationDelay: "600ms" }}
-          >
+                     <div
+             className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 ${
+               mounted ? "animate-fade-in-up" : "opacity-0"
+             }`}
+             style={{ animationDelay: "600ms" }}
+           >
             <div className="bg-purple-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105 group">
               <Code className="w-12 h-12 text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-200" />
               <h3 className="text-xl font-bold text-white mb-2">Development</h3>

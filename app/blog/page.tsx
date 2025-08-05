@@ -4,9 +4,9 @@ import Footer from "@/components/footer";
 import BlogGrid from "@/components/blog-grid";
 
 export const metadata: Metadata = {
-  title: "Blog - NexaForge | Latest Tech Insights & Updates",
+  title: "Blog - MT International | Latest Tech Insights & Updates",
   description:
-    "Stay updated with the latest trends in software development, technology insights, and industry news from NexaForge experts.",
+    "Stay updated with the latest trends in software development, technology insights, and industry news from MT International experts.",
   keywords:
     "software development blog, tech insights, programming tutorials, industry news",
 };

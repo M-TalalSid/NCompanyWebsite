@@ -56,7 +56,7 @@ export default function ScrollAnimation({
   return (
     <div
       ref={elementRef}
-      className={`transition-all duration-600 ease-out ${animationClasses[animation]} ${className}`}
+      className={`transition-all duration-500 ease-out ${animationClasses[animation]} ${className}`}
       style={{
         transitionDelay: `${delay}ms`,
       }}

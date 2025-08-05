@@ -305,12 +305,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!service) {
     return {
-      title: "Service Not Found - NexaForge",
+      title: "Service Not Found - MT International",
     };
   }
 
   return {
-    title: `${service.title} - NexaForge`,
+    title: `${service.title} - MT International`,
     description: service.description,
     keywords: `${service.title.toLowerCase()}, software development, technology solutions`,
   };

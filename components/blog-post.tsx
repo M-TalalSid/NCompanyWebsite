@@ -120,7 +120,7 @@ export default function BlogPost({ post }: BlogPostProps) {
               About {post.author}
             </h3>
             <p className="text-purple-200">
-              {post.author} is a senior software engineer at NexaForge with
+              {post.author} is a senior software engineer at MT International with
               expertise in {post.category.toLowerCase()}. With years of
               experience in the field, they regularly share insights and best
               practices with the development community.

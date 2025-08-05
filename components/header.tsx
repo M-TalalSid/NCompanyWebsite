@@ -33,7 +33,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 ">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link href="/" className="flex items-center space-x-2 group" aria-label="MT International Homepage">
             <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center font-bold text-white text-xl group-hover:scale-110 transition-transform duration-200">
               MT
             </div>
@@ -41,12 +41,13 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="text-white/90 hover:text-white transition-colors duration-200 relative group"
+                aria-label={`Navigate to ${item.label}`}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-200"></span>
@@ -68,6 +69,9 @@ export default function Header() {
           <button
             className="md:hidden text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -75,8 +79,8 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-purple-700/50">
-            <nav className="flex flex-col space-y-4 mt-4">
+          <div id="mobile-menu" className="md:hidden mt-4 pb-4 border-t border-purple-700/50">
+            <nav className="flex flex-col space-y-4 mt-4" role="navigation" aria-label="Mobile navigation">
               {navItems.map((item) => (
                 <Link
                   key={item.href}

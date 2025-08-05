@@ -9,11 +9,11 @@ import { InteractiveStatsGrid } from "@/components/interactive-charts";
 import ScrollAnimation from "@/components/scroll-animations";
 
 export const metadata: Metadata = {
-  title: "About Us - NexaForge | Our Story & Team",
+  title: "About Us - MT International | Our Story & Team",
   description:
-    "Learn about NexaForge, our mission, values, and the expert team behind our innovative software solutions.",
+    "Learn about MT International, our mission, values, and the expert team behind our innovative software solutions.",
   keywords:
-    "about nexaforge, software company, development team, company values, mission",
+    "about mt international, software company, development team, company values, mission",
 };
 
 export default function AboutPage() {

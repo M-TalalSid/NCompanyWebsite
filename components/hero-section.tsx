@@ -8,6 +8,7 @@ export default function HeroSection() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Remove delay for immediate loading
     setMounted(true);
   }, []);
 
@@ -21,11 +22,7 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Content */}
-        <div
-          className={`space-y-8 ${
-            mounted ? "animate-fade-in-up" : "opacity-0"
-          }`}
-        >
+        <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
           <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
             Unlock Premium{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">

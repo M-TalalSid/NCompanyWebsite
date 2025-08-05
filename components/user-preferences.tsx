@@ -41,7 +41,7 @@ export default function UserPreferences() {
 
   useEffect(() => {
     // Load preferences from localStorage
-    const saved = localStorage.getItem("nexaforge-preferences");
+    const saved = localStorage.getItem("mt-international-preferences");
     if (saved) {
       try {
         const parsedPreferences = JSON.parse(saved);
@@ -61,7 +61,7 @@ export default function UserPreferences() {
   };
 
   const savePreferences = () => {
-    localStorage.setItem("nexaforge-preferences", JSON.stringify(preferences));
+    localStorage.setItem("mt-international-preferences", JSON.stringify(preferences));
     setHasChanges(false);
 
     // Apply theme changes

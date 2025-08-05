@@ -15,7 +15,7 @@ const SocialLink = ({ href, icon: Icon, label }: SocialLinkProps) => {
   return (
     <a
       href={href}
-      className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:shadow-[0_0_16px_#9333ea] hover:scale-110"
+              className="w-10 h-10 bg-purple-700 rounded-full flex items-center justify-center text-white transition-all duration-200 hover:shadow-[0_0_16px_#9333ea] hover:scale-110"
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
       className="relative group"
     >
       {/* Glowing Animated Border */}
@@ -69,14 +69,14 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
       ></div>
 
       {/* Card Content */}
-      <div className="relative z-10 bg-purple-800/40 backdrop-blur-[10px] rounded-2xl p-8 border border-purple-700/40 transition-all duration-300 group-hover:scale-[1.03] shadow-xl">
-        <div className="relative w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-purple-600 p-1 group-hover:scale-110 transition-transform duration-300">
+      <div className="relative z-10 bg-purple-800/40 backdrop-blur-[10px] rounded-2xl p-8 border border-purple-700/40 transition-all duration-200 group-hover:scale-[1.03] shadow-xl">
+                  <div className="relative w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-purple-600 p-1 group-hover:scale-110 transition-transform duration-200">
           <Image
             src={member.image || placeholderImage}
             alt={`${member.name}'s profile`}
             width={128}
             height={128}
-            className="w-full h-full rounded-full object-cover group-hover:scale-105 transition-transform duration-300 shadow-lg group-hover:shadow-purple-500/60"
+            className="w-full h-full rounded-full object-cover group-hover:scale-105 transition-transform duration-200 shadow-lg group-hover:shadow-purple-500/60"
             priority={index < 5}
             placeholder="blur"
             blurDataURL="/placeholder.svg"
@@ -125,7 +125,7 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
           <motion.blockquote
             whileHover={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0.6, y: 10 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.2 }}
             className="text-purple-300 italic text-sm border-t border-purple-700 pt-4 mt-4 relative"
           >
             <Quote className="absolute -top-2 left-1 text-purple-500 w-4 h-4 opacity-60" />
