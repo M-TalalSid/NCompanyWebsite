@@ -20,7 +20,7 @@ export default function PageTransitions({
       const timer = setTimeout(() => {
         setDisplayChildren(children);
         setIsTransitioning(false);
-      }, 300);
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [children, displayChildren]);
@@ -29,7 +29,7 @@ export default function PageTransitions({
     <div className="relative">
       {/* Page transition overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 transition-all duration-400 ${
+        className={`fixed inset-0 z-50 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 transition-all duration-300 ${
           isTransitioning ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -43,7 +43,7 @@ export default function PageTransitions({
 
       {/* Page content */}
       <div
-        className={`transition-all duration-400 ${
+        className={`transition-all duration-300 ${
           isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
         }`}
       >

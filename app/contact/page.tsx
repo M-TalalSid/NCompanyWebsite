@@ -6,11 +6,11 @@ import ContactInfo from "@/components/contact-info";
 import ContactHero from "@/components/contact-hero";
 
 export const metadata: Metadata = {
-  title: "Contact Us - NexaForge | Get In Touch",
+  title: "Contact Us - MT International | Get In Touch",
   description:
-    "Contact NexaForge for your software development needs. Get a free consultation and quote for your project.",
+    "Contact MT International for your software development needs. Get a free consultation and quote for your project.",
   keywords:
-    "contact nexaforge, software development consultation, get quote, contact form",
+    "contact mt international, software development consultation, get quote, contact form",
 };
 
 export default function ContactPage() {

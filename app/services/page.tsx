@@ -6,7 +6,7 @@ import ServicesHero from "@/components/services-hero";
 import ScrollAnimation from "@/components/scroll-animations";
 
 export const metadata: Metadata = {
-  title: "Our Services - NexaForge | Software Development Solutions",
+  title: "Our Services - MT International | Software Development Solutions",
   description:
     "Explore our comprehensive range of software development services including custom development, mobile apps, cloud solutions, and more.",
   keywords:

@@ -44,7 +44,7 @@ const teamMembers = [
   {
     name: "Abdul Wahid",
     role: "UX/UI Designer",
-    image: "wahidprofilepic.webp",
+    image: "/wahidprofilepic.webp",
     bio: "Creative designer focused on user-centered design and exceptional experiences.",
     quote:
       "Every pixel should have a purpose. Design is where empathy meets innovation.",
@@ -58,7 +58,7 @@ const teamMembers = [
   {
     name: "Hammad Abbasi",
     role: "DevOps Engineer",
-    image: "hammadprofilepic.webp",
+    image: "/hammadprofilepic.webp",
     bio: "Infrastructure specialist ensuring reliable, scalable, and secure deployments.",
     quote:
       "Behind every smooth deployment is a thousand lines of invisible preparation.",
@@ -72,7 +72,7 @@ const teamMembers = [
   {
     name: "Saad Darbari",
     role: "Project Manager",
-    image: "saadprofilepic.webp",
+    image: "/saadprofilepic.webp",
     bio: "Experienced PM ensuring projects are delivered on time and exceed expectations.",
     quote:
       "A good plan today is better than a perfect plan tomorrow. Let’s execute with clarity.",
@@ -86,7 +86,7 @@ const teamMembers = [
   {
     name: "Zain Ul Abdeen",
     role: "Marketing Specialist",
-    image: "zainprofilepic.webp",
+    image: "/zainprofilepic.webp",
     bio: "Marketing expert driving brand awareness and customer engagement.",
     quote:
       "If you speak to everyone, you speak to no one. Precision builds powerful brands.",

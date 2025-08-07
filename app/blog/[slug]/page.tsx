@@ -351,12 +351,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: "Post Not Found - NexaForge Blog",
+      title: "Post Not Found - MT International Blog",
     };
   }
 
   return {
-    title: `${post.title} - NexaForge Blog`,
+    title: `${post.title} - MT International Blog`,
     description: post.excerpt,
     keywords: `${post.category.toLowerCase()}, software development, ${post.title.toLowerCase()}`,
   };
