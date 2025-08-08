@@ -1,23 +1,23 @@
 # MT International - Company Website
 
-A modern, responsive company website built with Next.js 15, TypeScript, and Tailwind CSS.
+A Modern, Responsive Company Website built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
-- **Modern Design**: Purple gradient theme with glassmorphism effects
-- **Responsive**: Works perfectly on all devices
-- **Fast Performance**: Built with Next.js 15 for optimal speed
-- **SEO Optimized**: Meta tags, structured data, and semantic HTML
-- **Interactive**: Smooth animations and micro-interactions
-- **Accessible**: ARIA labels and keyboard navigation support
+- **Modern Design**: Purple Gradient Theme with Glassmorphism Effects
+- **Responsive**: Works Perfectly on all Devices
+- **Fast Performance**: Built with Next.js 15 for Optimal Speed
+- **SEO Optimized**: Meta Tags, Structured Data, and Semantic HTML
+- **Interactive**: Smooth Animations and Micro-Interactions
+- **Accessible**: ARIA Labels and Keyboard Navigation Support
 
 ## 📋 Pages
 
-- **Homepage**: Hero section, company stats, services preview, testimonials
-- **About**: Team information, company values, interactive stats
-- **Services**: Detailed service offerings with individual pages
-- **Blog**: Tech articles and insights
-- **Contact**: Contact form with EmailJS integration
+- **Homepage**: Hero Section, Company Stats, Services Preview, Testimonials
+- **About**: Team Information, Company Values, Interactive Stats
+- **Services**: Detailed Service Offerings with Individual Pages
+- **Blog**: Tech Articles and Insights
+- **Contact**: Contact Form with EmailJS Integration
 
 ## 🛠️ Tech Stack
 
@@ -32,7 +32,7 @@ A modern, responsive company website built with Next.js 15, TypeScript, and Tail
 
 ## 📄 License
 
-This project is private and proprietary to MT International.
+This Project is Private and Proprietary to MT International.
 
 ## 📞 Contact
 
