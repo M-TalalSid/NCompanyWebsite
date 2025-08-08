@@ -293,6 +293,102 @@ const services = {
       "Continuous Improvement",
     ],
   },
+  "logo-designing": {
+    title: "Logo Designing",
+    description:
+      "Create memorable and impactful logos that define your brand identity.",
+    longDescription:
+      "Our logo designing services craft unique, visually stunning logos that capture your brand’s essence and leave a lasting impression on your audience, tailored to your business vision.",
+    features: [
+      "Custom Logo Creation",
+      "Brand Identity Development",
+      "Multiple Design Concepts",
+      "Color Palette Selection",
+      "Typography Design",
+      "Vector File Formats",
+      "Brand Guidelines",
+      "Revisions & Feedback",
+    ],
+    benefits: [
+      "Strong brand recognition",
+      "Professional visual identity",
+      "Versatile for all media",
+      "Enhanced customer trust",
+      "Memorable design",
+    ],
+    process: [
+      "Brand Discovery",
+      "Concept Sketching",
+      "Design Development",
+      "Client Feedback",
+      "Finalization",
+      "Delivery & Support",
+    ],
+  },
+  "script-writing": {
+    title: "Script Writing",
+    description:
+      "Craft compelling scripts for videos, advertisements, and digital content.",
+    longDescription:
+      "Our script writing services deliver engaging and targeted scripts for commercials, explainer videos, social media content, and more, designed to connect with your audience and convey your message effectively.",
+    features: [
+      "Script Conceptualization",
+      "Storyboarding",
+      "Dialogue Writing",
+      "Tone & Voice Customization",
+      "Script Editing",
+      "Audience Targeting",
+      "Call-to-Action Integration",
+      "Format Optimization",
+    ],
+    benefits: [
+      "Engaging storytelling",
+      "Clear brand messaging",
+      "Audience connection",
+      "Increased conversions",
+      "Professional tone",
+    ],
+    process: [
+      "Project Briefing",
+      "Audience Analysis",
+      "Script Drafting",
+      "Client Review",
+      "Revisions",
+      "Final Delivery",
+    ],
+  },
+  "graphic-designing": {
+    title: "Graphic Designing",
+    description:
+      "Elevate your brand with stunning visuals and creative graphic designs.",
+    longDescription:
+      "Our graphic designing services provide high-quality visuals for marketing materials, social media, websites, and more, ensuring your brand stands out with professional and creative designs.",
+    features: [
+      "Marketing Collateral Design",
+      "Social Media Graphics",
+      "Infographic Creation",
+      "Branding Materials",
+      "Print & Digital Designs",
+      "UI/UX Graphics",
+      "Custom Illustrations",
+      "Design Revisions",
+    ],
+    benefits: [
+      "Enhanced brand appeal",
+      "Consistent visual identity",
+      "Engaging marketing materials",
+      "Improved user engagement",
+      "Professional aesthetics",
+    ],
+    process: [
+      "Design Consultation",
+      "Concept Development",
+      "Design Creation",
+      "Client Feedback",
+      "Revisions",
+      "Final Delivery",
+    ],
+  },
 };
 
 interface Props {
@@ -312,7 +408,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.title} - MT International`,
     description: service.description,
-    keywords: `${service.title.toLowerCase()}, software development, technology solutions`,
+    keywords: `${service.title.toLowerCase()}, software development, technology solutions, design services`,
   };
 }
 
