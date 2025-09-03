@@ -185,8 +185,8 @@ export default function ModernContactForm() {
   }
 
   return (
-    <div className="bg-purple-800/30 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-purple-700/50">
-      <div className="mb-8">
+    <div className="bg-purple-800/30 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-purple-700/50">
+      <div className="mb-14">
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
           Start Your Project
         </h2>
